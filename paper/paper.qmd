@@ -3,7 +3,7 @@ title: "Timing and Positioning: Insights from Steak-Related Product Pricing at W
 subtitle: "My subtitle if needed"
 author: 
   - Wei Wang
-thanks: "Code and data are available at: [https://github.com/RohanAlexander/starter_folder](https://github.com/RohanAlexander/starter_folder)."
+thanks: "Code and data are available at: [https://github.com/zcyjn233/Explore-steak-related-products)."
 date: today
 date-format: long
 abstract: "This study explores pricing strategies in the retail grocery sector, with a focus on steak-related products from Walmart and Loblaws. Utilizing a comprehensive dataset of historical and current prices, alongside detailed product descriptions and timing of price adjustments, the research identifies significant patterns influencing consumer behavior. Advanced statistical models and visual analyses provide insight into pricing dynamics and highlight differences in strategy between the two chains. The findings reveal actionable trends, emphasizing the role of timing and product positioning in shaping customer purchasing decisions.."
@@ -49,12 +49,6 @@ The relationship between historical and current prices is also significant. Prod
 Pricing remains one of the most critical tools in the fiercely competitive grocery industry, particularly for high-demand categories such as steak-related products. Retailers must navigate a delicate balance between competitive pricing and maintaining profitability, a challenge compounded by seasonal demand fluctuations and evolving consumer preferences. This study provides actionable insights into how strategic pricing decisions can drive sales, enhance market share, and build customer loyalty. For example, by understanding the relationship between price reductions and seasonal demand, retailers can time promotions more effectively to capitalize on peak shopping periods. Furthermore, the study highlights the importance of tailoring pricing strategies to meet the needs of different consumer segments, as demonstrated by Walmart’s consistent pricing approach versus Loblaws’ promotional tactics. Policymakers and industry analysts can also benefit from these findings, as they shed light on broader market dynamics and consumer behavior trends. Ultimately, this study underscores the pivotal role of pricing in shaping competition and driving success in the grocery sector.
 
 
-Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
-
-
-
-
-
 
 # Data {#sec-data}
 
@@ -91,9 +85,6 @@ The analysis focuses on three main outcome variables:
 2.Seasonal Trends: Seasonal variation is evident in the data, with higher sales volumes during summer mont
 
 3.Vendor Comparisons: Walmart and Loblaws
-
-
-Some of our data is of penguins (@box-plot), from @palmerpenguins.
 
 ```{r}
 #| label: box-plot
@@ -186,24 +177,40 @@ The purple dashed trendline indicates a positive relationship between old and cu
 
 This visualization underscores the pricing strategies employed by vendors, showing how significant markdowns are used selectively, likely to clear inventory or drive consumer interest in premium products. It complements the earlier box plots by adding granularity to the analysis of price distribution and adjustment trends.
 
-## Predictor variables
-
-Add graphs, tables and text.
-
-Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
-
-
-
-
-
 
 
 
 # Model
 
-The goal of our modelling strategy is twofold. Firstly,...
+## Bayesian Analysis Model Description
+The study employs a Bayesian linear regression model to investigate the factors influencing the current prices of steak-related products across two major retailers, Walmart and Loblaws. This approach integrates prior knowledge with observed data, providing a probabilistic framework for understanding the relationships between pricing strategies, historical prices, and seasonal trends.
 
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+The model uses current price as the response variable, with predictors including:
+
+1.Vendor: Distinguishing between Walmart and Loblaws to capture differences in pricing strategies.
+
+2.Month: Accounting for seasonal variations in pricing, such as increased demand during summer.
+
+3.Old Price: Reflecting the influence of historical prices on current pricing decisions.
+
+A Gaussian likelihood is specified for the response variable, which is appropriate given the continuous nature of the current prices. Informative priors are placed on the coefficients and auxiliary parameters, such as the intercept and residual variance, allowing the model to incorporate domain expertise while remaining flexible to the data.
+
+## Key Features of the Bayesian Approach:
+1.Integration of Priors: The use of normal priors for coefficients assumes that most effects are centered around zero, allowing the data to shift these estimates based on evidence. This ensures stability in parameter estimation, particularly for smaller datasets or those with high variability.
+
+2.Posterior Distributions: Bayesian inference produces posterior distributions for each parameter, offering insights into the range of plausible values rather than point estimates. This provides a richer understanding of uncertainty in the effects of predictors.
+
+3.MCMC Sampling: The model employs Markov Chain Monte Carlo (MCMC) techniques to estimate posterior distributions, ensuring accurate parameter estimation even in complex scenarios. Diagnostics such as trace plots and Rhat values confirm the convergence of these chains, validating the robustness of the results.
+
+## Model Strengths:
+1.Uncertainty Quantification: By providing credible intervals for parameters, the model quantifies uncertainty, enabling more informed decision-making.
+
+2.Flexibility: The Bayesian framework allows the inclusion of prior knowledge, making it adaptable to changes in the dataset or research context.
+
+3.Interpretability: Coefficients and their posterior distributions offer clear insights into the effects of vendor strategies, seasonal trends, and historical prices.
+
+Background details and diagnostics are included in [Appendix -@sec-model-details].
+
 
 ## Model set-up
 
