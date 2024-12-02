@@ -100,7 +100,7 @@ Some of our data is of penguins (@box-plot), from @palmerpenguins.
 #| fig-cap: Current prices of steak-related products by vendor and month, showing Walmart's consistent lower pricing and Loblaws' broader range with seasonal price fluctuations.
 #| echo: false
 #### Read data ####
-analysis_data <- read_parquet("/Users/lucky/Desktop/involves-original-work/data/02-analysis_data/analysis_data.parquet")
+analysis_data <- read_parquet("/Users/lucky/Desktop/Explore-steak-related-products/data/02-analysis_data/analysis_data.parquet")
 
 # Ensure month is treated as a factor
 analysis_data <- analysis_data %>%
@@ -157,7 +157,8 @@ Together, these visualizations reveal insights into vendor-specific pricing stra
 #| warning: false
 #| message: false
 
-analysis_data <- read_parquet("/Users/lucky/Desktop/involves-original-work/data/02-analysis_data/analysis_data.parquet")
+analysis_data <- read_parquet("/Users/lucky/Desktop/Explore-steak-related-products/data/02-analysis_data/analysis_data.parquet")
+
 
 #### Distribution of current_price by old_price ####
 ggplot(analysis_data, aes(x = old_price, y = current_price)) +
