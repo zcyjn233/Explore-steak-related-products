@@ -1,37 +1,70 @@
 #### Preamble ####
-# Purpose: Models... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Purpose: graph
+# Author: Wei Wang
+# Date: 2 December 2024 
+# Contact: won.wang@mail.utoronto.ca
 
 
 #### Workspace setup ####
 library(tidyverse)
-library(rstanarm)
+library(arrow)
 
 #### Read data ####
-analysis_data <- read_csv("data/analysis_data/analysis_data.csv")
+# Ensure month is treated as a factor
+analysis_data <- analysis_data %>%
+  mutate(month = factor(month, levels = 1:12, labels = month.abb[1:12]))
 
-### Model data ####
-first_model <-
-  stan_glm(
-    formula = flying_time ~ length + width,
-    data = analysis_data,
-    family = gaussian(),
-    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_aux = exponential(rate = 1, autoscale = TRUE),
-    seed = 853
+#### Distribution of current_price by vendor ####
+ggplot(analysis_data, aes(x = reorder(vendor, current_price, FUN = median), y = current_price, fill = vendor)) +
+  geom_boxplot(outlier.colour = "red", outlier.shape = 16, outlier.size = 2) +
+  coord_flip() + # Flip the coordinates for better readability
+  labs(
+    title = "Distribution of Current Price by Vendor",
+    subtitle = "Steak-related products",
+    x = "Vendor",
+    y = "Current Price (CAD)",
+    fill = "Vendor"
+  ) +
+  theme_light() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.text.x = element_text(angle = 45, hjust = 1)
   )
 
+#### Distribution of current_price by month ####
+ggplot(analysis_data, aes(x = month, y = current_price, fill = month)) +
+  geom_boxplot(outlier.colour = "red", outlier.shape = 16, outlier.size = 2) +
+  labs(
+    title = "Monthly Distribution of Current Price",
+    subtitle = "Steak-related products",
+    x = "Month",
+    y = "Current Price (CAD)",
+    fill = "Month"
+  ) +
+  theme_light() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
 
-#### Save model ####
-saveRDS(
-  first_model,
-  file = "models/first_model.rds"
-)
+#### Distribution of current_price by old_price ####
+ggplot(analysis_data, aes(x = old_price, y = current_price)) +
+  geom_point(alpha = 0.6, color = "orange", size = 2) + # Add transparency and size for clarity
+  geom_smooth(method = "lm", color = "purple", se = FALSE, linetype = "dashed") + # Add trendline
+  labs(
+    title = "Relationship Between Old and Current Prices",
+    subtitle = "Steak-related products",
+    x = "Old Price (CAD)",
+    y = "Current Price (CAD)"
+  ) +
+  theme_light() + # Change to a cleaner theme
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    axis.title = element_text(size = 12)
+  )
 
 
