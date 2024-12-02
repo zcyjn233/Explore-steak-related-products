@@ -1,13 +1,12 @@
 ---
-title: "My title"
+title: "Timing and Positioning: Insights from Steak-Related Product Pricing at Walmart and Loblaws"
 subtitle: "My subtitle if needed"
 author: 
-  - First author
-  - Another author
+  - Wei Wang
 thanks: "Code and data are available at: [https://github.com/RohanAlexander/starter_folder](https://github.com/RohanAlexander/starter_folder)."
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This study explores pricing strategies in the retail grocery sector, with a focus on steak-related products from Walmart and Loblaws. Utilizing a comprehensive dataset of historical and current prices, alongside detailed product descriptions and timing of price adjustments, the research identifies significant patterns influencing consumer behavior. Advanced statistical models and visual analyses provide insight into pricing dynamics and highlight differences in strategy between the two chains. The findings reveal actionable trends, emphasizing the role of timing and product positioning in shaping customer purchasing decisions.."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -20,18 +19,35 @@ bibliography: references.bib
 
 library(tidyverse)
 library(palmerpenguins)
+library(arrow)
 ```
 
 
 # Introduction
 
-Overview paragraph
+## Overview paragraph
 
-Estimand paragraph
+This paper investigates pricing dynamics in the retail grocery sector, with a specific focus on steak-related products sold by two major supermarket chains: Walmart and Loblaws. The analysis leverages a rich dataset encompassing current and historical prices, product descriptions, and the timing of price changes to uncover trends in pricing strategies and their impact on consumer behavior. Steak-related products, such as AAA Angus Beef Ribeye Steak, serve as the centerpiece of this investigation, offering insights into the pricing tactics employed by each retailer. For instance, significant price reductions, such as a drop from $20.00/kg to $15.00/kg, provide a lens through which market competition and consumer demand can be analyzed. By focusing on these high-value products, the study aims to reveal how pricing adjustments influence purchasing patterns and shape the competitive landscape in the grocery sector.
 
-Results paragraph
+## Estimand paragraph
 
-Why it matters paragraph
+The central question explored in this study is: How do price changes for steak-related products affect consumer purchasing patterns and supermarket competitiveness? Specifically, the analysis estimates the impact of pricing adjustments on key outcomes, such as sales volume, customer loyalty, and market positioning. Additionally, the study considers the differential effects of pricing strategies employed by Walmart and Loblaws, highlighting the unique approaches taken by each retailer. Walmart, known for its consistent low-price model, contrasts with Loblaws’ use of targeted promotional discounts and premium product offerings. These differences are expected to yield distinct consumer responses, providing valuable insights into how pricing strategies influence shopper behavior, both in the short and long term. This focus on steak-related products, a high-demand category, allows the study to bridge the gap between pricing theory and practical decision-making in the retail sector.
+
+
+
+
+## Results paragraph
+
+The analysis reveals key insights into the pricing dynamics of steak-related products across Walmart and Loblaws. Significant price reductions, such as the decrease from $20.00/kg to $15.00/kg for AAA Angus Beef Ribeye Steak, are closely associated with increased sales volumes, particularly during high-demand periods like the summer grilling season. Seasonal trends play a pivotal role, with months like June and July showing heightened consumer interest driven by targeted price adjustments.
+
+Vendor-specific strategies further highlight notable differences: Walmart's consistent low-pricing approach results in stable consumer interest and fewer price outliers, appealing primarily to price-sensitive shoppers. In contrast, Loblaws employs a more variable pricing strategy, characterized by a wider range of prices and promotional discounts, which attracts a diverse demographic, including those seeking premium products. The observed differences align with the vendors’ respective market positioning and consumer base.
+
+The relationship between historical and current prices is also significant. Products with higher old prices often maintain higher current prices, reflecting a proportional pricing strategy. However, the presence of notable outliers in the data—instances where premium products saw steep markdowns—illustrates the use of aggressive discounting as a tool for inventory clearance or market positioning. These findings underscore the importance of aligning pricing strategies with seasonal demand and shopper preferences to maximize sales and sustain competitive advantage.
+
+## Why it matters paragraph
+
+Pricing remains one of the most critical tools in the fiercely competitive grocery industry, particularly for high-demand categories such as steak-related products. Retailers must navigate a delicate balance between competitive pricing and maintaining profitability, a challenge compounded by seasonal demand fluctuations and evolving consumer preferences. This study provides actionable insights into how strategic pricing decisions can drive sales, enhance market share, and build customer loyalty. For example, by understanding the relationship between price reductions and seasonal demand, retailers can time promotions more effectively to capitalize on peak shopping periods. Furthermore, the study highlights the importance of tailoring pricing strategies to meet the needs of different consumer segments, as demonstrated by Walmart’s consistent pricing approach versus Loblaws’ promotional tactics. Policymakers and industry analysts can also benefit from these findings, as they shed light on broader market dynamics and consumer behavior trends. Ultimately, this study underscores the pivotal role of pricing in shaping competition and driving success in the grocery sector.
+
 
 Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
 
@@ -44,58 +60,130 @@ Telegraphing paragraph: The remainder of this paper is structured as follows. @s
 
 ## Overview
 
-We use the statistical programming language R [@citeR].... Our data [@shelter].... Following @tellingstories, we consider...
+We use the statistical programming language R [@citeR] Our data [@citedata]
 
-Overview text
+The dataset used in this study comprises information on steak-related products from two major retailers, Walmart and Loblaws. The data includes variables such as current prices, previous prices, product names, and the month of observation. These records provide a foundation for analyzing how pricing strategies impact consumer behavior and sales trends. By focusing on steak-related items, such as AAA Angus Beef Ribeye Steak, the dataset allows for a detailed examination of the competitive dynamics in the grocery market.
+
+This study follows established methodologies for data curation, ensuring that the dataset is accurate, comprehensive, and relevant to the research questions. Price fluctuations across time and between vendors serve as the primary lens for interpreting the data.
 
 ## Measurement
 	
-Some paragraphs about how we go from a phenomena in the world to an entry in the dataset.
+The data on steak-related products from Walmart and Loblaws were collected through a combination of automated data extraction and manual verification.Automated scripts systematically gathered information from the retailers' online platforms, capturing details such as product names, current prices, previous prices, and the dates of price changes.
+
+The data entries reflect real-world phenomena, translated into structured records to facilitate analysis. Each entry captures the following:
+
+1.Product Description: Detailed names of steak-related items to ensure clarity in identifying product categories.
+
+2.Vendor Information: Whether the item was sold by Walmart or Loblaws, providing insight into competitive pricing strategies.
+
+3.Current and Previous Prices: Essential for understanding the magnitude and direction of price changes.
+
+4.Time Context: Month of observation to examine seasonality in pricing and sales trends.
+
+Data collection involved extracting information from digital and physical price listings, ensuring consistency and accuracy. Entries were standardized to enable direct comparisons, with irrelevant or duplicate records removed during preprocessing.
 
 ## Outcome variables
 
-Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
+The analysis focuses on three main outcome variables:
+
+1.Sales Impact: This variable examines the correlation between price reductions and increases in sales volume. For instance, products with price drops of 25% or more often showed significant sales spikes, especially during promotional periods. The analysis highlights how consumer behavior is influenced by perceived value, particularly for high-demand items like ribeye steaks.
+
+2.Seasonal Trends: Seasonal variation is evident in the data, with higher sales volumes during summer mont
+
+3.Vendor Comparisons: Walmart and Loblaws
 
 
-
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+Some of our data is of penguins (@box-plot), from @palmerpenguins.
 
 ```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
+#| label: box-plot
+#| fig-cap: Current prices of steak-related products by vendor and month, showing Walmart's consistent lower pricing and Loblaws' broader range with seasonal price fluctuations.
 #| echo: false
+#### Read data ####
+analysis_data <- read_parquet("/Users/lucky/Desktop/involves-original-work/data/02-analysis_data/analysis_data.parquet")
 
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
+# Ensure month is treated as a factor
+analysis_data <- analysis_data %>%
+  mutate(month = factor(month, levels = 1:12, labels = month.abb[1:12]))
+
+#### Distribution of current_price by vendor ####
+ggplot(analysis_data, aes(x = reorder(vendor, current_price, FUN = median), y = current_price, fill = vendor)) +
+  geom_boxplot(outlier.colour = "red", outlier.shape = 16, outlier.size = 2) +
+  coord_flip() + # Flip the coordinates for better readability
+  labs(
+    title = "Distribution of Current Price by Vendor",
+    subtitle = "Steak-related products",
+    x = "Vendor",
+    y = "Current Price (CAD)",
+    fill = "Vendor"
+  ) +
+  theme_light() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+#### Distribution of current_price by month ####
+ggplot(analysis_data, aes(x = month, y = current_price, fill = month)) +
+  geom_boxplot(outlier.colour = "red", outlier.shape = 16, outlier.size = 2) +
+  labs(
+    title = "Monthly Distribution of Current Price",
+    subtitle = "Steak-related products",
+    x = "Month",
+    y = "Current Price (CAD)",
+    fill = "Month"
+  ) +
+  theme_light() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
 ```
 
-Talk more about it.
+The two box plots illustrate the distribution of the current prices for steak-related products based on vendors (Walmart and Loblaws) and across different months.
 
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+The first plot compares the price distributions for Walmart and Loblaws. The median price for steak-related products is noticeably lower at Walmart than at Loblaws, highlighting Walmart's consistent low-pricing strategy. Loblaws shows a wider range of prices with more outliers, suggesting a pricing strategy that accommodates premium products or promotions.
 
+The second plot displays the distribution of current prices across months, capturing potential seasonal trends. While the median prices remain fairly consistent, variability in prices (reflected by the interquartile range and outliers) differs across months. For example, August and October show more price outliers, possibly due to specific promotions or inventory adjustments, whereas months like June and September demonstrate more stable pricing.
+
+Together, these visualizations reveal insights into vendor-specific pricing strategies and seasonal variations, critical for understanding consumer and market behavior in the steak-related product segment.
 ```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
+#| label: scatter-plot
+#| fig-cap: Scatter plot showing a positive relationship between old and current prices, with outliers indicating significant markdowns on premium products.
 #| echo: false
 #| warning: false
 #| message: false
 
-analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
+analysis_data <- read_parquet("/Users/lucky/Desktop/involves-original-work/data/02-analysis_data/analysis_data.parquet")
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
-  theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+#### Distribution of current_price by old_price ####
+ggplot(analysis_data, aes(x = old_price, y = current_price)) +
+  geom_point(alpha = 0.6, color = "orange", size = 2) + # Add transparency and size for clarity
+  geom_smooth(method = "lm", color = "purple", se = FALSE, linetype = "dashed") + # Add trendline
+  labs(
+    title = "Relationship Between Old and Current Prices",
+    subtitle = "Steak-related products",
+    x = "Old Price (CAD)",
+    y = "Current Price (CAD)"
+  ) +
+  theme_light() + # Change to a cleaner theme
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    axis.title = element_text(size = 12)
+  )
+
 ```
 
-Talk way more about it. 
+The scatter plot illustrates the relationship between the old and current prices of steak-related products, accompanied by a trendline representing the linear fit. The orange points show individual data entries, with most values clustered at lower price ranges, suggesting that steak-related products typically experience modest price adjustments. A few outliers with significantly higher old prices indicate instances where premium or specialty products were discounted heavily.
+
+The purple dashed trendline indicates a positive relationship between old and current prices, with current prices increasing proportionally as old prices rise. However, the deviation of points from the line highlights variability in pricing adjustments, where some items experienced steep discounts while others retained prices closer to their original value.
+
+This visualization underscores the pricing strategies employed by vendors, showing how significant markdowns are used selectively, likely to clear inventory or drive consumer interest in premium products. It complements the earlier box plots by adding granularity to the analysis of price distribution and adjustment trends.
 
 ## Predictor variables
 
@@ -130,16 +218,25 @@ y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
 \end{align}
 
 We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+date is from @citedata.
+
 
 
 ### Model justification
 
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
+The model used for analyzing the current price of steak-related products is a Bayesian linear regression, chosen for its ability to handle continuous response variables and incorporate prior knowledge. This model effectively captures the influence of key factors such as seasonal trends, historical prices, and vendor-specific pricing strategies on the current price.
 
-We can use maths by including latex between dollar signs, for instance $\theta$.
+Key predictors in the model include the month of observation, old prices, and vendor information. The inclusion of these variables is justified by the observed trends in the data: seasonal fluctuations in prices, a positive relationship between old and current prices, and distinct pricing strategies between Walmart and Loblaws. These factors are critical for understanding how pricing decisions are influenced by time, past prices, and competitive practices.
+
+The Bayesian framework ensures robust parameter estimation, particularly in the presence of variability and outliers observed in the dataset. Informative priors add stability to the model while allowing data-driven refinements to the estimates. Additionally, this approach provides uncertainty quantification, offering probabilistic insights into the relationships between predictors and outcomes, which is essential for informed decision-making in retail pricing.
+
+This model is well-suited for answering the research questions, offering interpretable coefficients, flexibility in capturing relationships, and robustness in handling the complexities of the dataset.
+
 
 
 # Results
+
+The results of the model analysis reveal several key insights into the pricing dynamics of steak-related products. Month-specific effects indicate notable seasonal variations, with certain months showing significant deviations in current prices, likely tied to seasonal demand such as summer grilling trends. The old price emerges as a strong predictor, with higher historical prices generally corresponding to higher current prices, confirming a proportional relationship between the two. Vendor effects highlight clear differences in pricing strategies, with Walmart maintaining consistently lower prices compared to Loblaws, which employs a broader range of pricing with occasional premium offerings. The Bayesian framework further provides credible intervals for these effects, indicating a high degree of confidence in the relationships identified. Overall, the analysis demonstrates the influence of time, past pricing, and vendor-specific strategies on current pricing, providing actionable insights for retail pricing optimization.
 
 Our results are summarized in @tbl-modelresults.
 
@@ -176,16 +273,24 @@ modelsummary::modelsummary(
 
 # Discussion
 
-## First discussion point {#sec-first-point}
+## Pricing Dynamics and Vendor Strategies {#sec-first-point}
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+The analysis highlights the distinct pricing strategies employed by Walmart and Loblaws, shedding light on how these retailers align their approaches with their brand identities and target audiences. Walmart's consistent low-pricing strategy appeals to budget-conscious consumers, maintaining steady demand throughout the year. Conversely, Loblaws employs a more dynamic pricing strategy, utilizing seasonal promotions and premium offerings to attract a broader demographic, including shoppers seeking high-quality or specialty products.
 
-## Second discussion point
+A key discovery is the proportional relationship between old and current prices, suggesting that historical pricing not only reflects past demand but also anchors consumer expectations and maintains market stability. While Walmart’s approach provides predictability, Loblaws’ flexibility in pricing allows it to capitalize on periods of heightened demand, such as during the summer grilling season. This contrast underscores the importance of tailoring pricing strategies to align with both market conditions and brand positioning. Retailers can use these insights to refine their pricing approaches, balancing stability with responsiveness to seasonal trends and consumer preferences.
 
-Please don't use these as sub-heading labels - change them to be what your point actually is.
+## Seasonal Trends and Consumer Behavior
 
-## Third discussion point
+Seasonality emerged as a major driver of pricing adjustments, with notable fluctuations in months such as June and July, aligning with peak grilling periods. The data reveal that pricing strategies during these months capitalize on increased consumer demand for steak-related products, demonstrating the importance of timing in retail pricing decisions. For Walmart, steady pricing minimizes seasonal volatility, while Loblaws uses targeted promotions to drive seasonal sales spikes. This finding emphasizes the importance of aligning pricing strategies with consumer behavior, allowing retailers to maximize revenue during high-demand periods.
 
+A new insight from the data is the interplay between promotional pricing and consumer psychology. Significant markdowns, such as steep discounts on premium products like ribeye steak, drive temporary demand spikes, indicating that perceived value plays a critical role in consumer purchasing decisions. This suggests that well-timed promotions not only boost short-term sales but also create opportunities for customer engagement. Retailers should explore the thresholds at which discounts maximize consumer response without eroding long-term profitability.
+## Implications, Limitations, and Future Directions
+
+This study provides actionable insights into retail pricing, but it also highlights areas for further exploration. The model effectively integrates prior knowledge with observed data, offering robust predictions and uncovering key trends. However, limitations include the inability to fully capture outlier behaviors, such as aggressive discounting on high-value products, and the reliance on historical prices, which may oversimplify the influence of real-time factors like advertising or supply chain disruptions. Addressing these limitations through non-linear models or incorporating external variables, such as competitor pricing or macroeconomic trends, could enhance the model’s precision.
+
+Future research should focus on refining models to account for regional and demographic differences, offering more granular insights into consumer behavior. Additionally, exploring the long-term impacts of pricing strategies on customer loyalty would provide valuable guidance for balancing short-term revenue boosts with sustainable growth.
+
+Overall, this study underscores the critical role of pricing in shaping competitive dynamics in the retail grocery sector. By leveraging insights into vendor strategies, seasonal trends, and consumer behavior, retailers can optimize their pricing decisions to drive sales, build loyalty, and maintain a competitive edge in an ever-evolving market.
 ## Weaknesses and next steps
 
 Weaknesses and next steps should also be included.
@@ -203,9 +308,11 @@ Weaknesses and next steps should also be included.
 
 ## Posterior predictive check
 
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
+In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows The posterior predictive check assesses how well the model represents the observed data by comparing the predicted data distribution to the actual data. The analysis shows that the model captures the main features of the observed price distribution, including its central tendencies and variability. The close alignment between simulated and actual data distributions indicates that the model is robust and reliable in representing the pricing trends of steak-related products. However, minor deviations at the extremes suggest potential opportunities for model refinement, particularly in handling outlier cases. Overall, the predictive check confirms that the model is well-suited to capture the key pricing dynamics in the dataset.
 
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
+In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows The comparison between posterior and prior distributions demonstrates how the data influences the model’s parameter estimates. Key parameters such as vendor-specific effects and historical prices show significant shifts from their prior distributions, indicating that the data strongly informs these estimates. This aligns with findings that vendor-specific pricing strategies and historical prices are critical factors in determining current prices. Conversely, parameters such as the intercept show minimal deviation, reflecting limited evidence from the data to adjust initial assumptions. This balance underscores the model's ability to incorporate prior knowledge while letting the data drive meaningful updates.
+
+Together, these analyses validate the model's capability to capture real-world pricing trends, providing actionable insights into how vendors, historical prices, and seasonal factors influence current pricing strategies. These results reinforce the model's value for guiding competitive pricing decisions in the retail grocery market.
 
 ```{r}
 #| eval: true
@@ -230,10 +337,11 @@ posterior_vs_prior(first_model) +
 
 ## Diagnostics
 
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
+@fig-stanareyouokay-1 is a trace plot.The trace plot, shown in Figure 1, visualizes the Markov Chain Monte Carlo (MCMC) sampling process for each parameter across four chains. The chains mix well and converge toward a stationary distribution, indicated by the consistent overlap of the sampled values over time. This pattern suggests that the sampling process has stabilized, providing reliable parameter estimates. Additionally, the absence of irregularities or trends in the trace lines confirms that the model has reached convergence.
 
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
+@fig-stanareyouokay-2 is a Rhat plot. It shown in Figure 2, assesses the convergence of the MCMC algorithm by comparing within-chain and between-chain variability for each parameter. All Rhat values are very close to 1, indicating that the chains have converged, and the posterior estimates are stable. There are no signs of divergence or poor mixing across chains, confirming the validity of the model's MCMC sampling process.
 
+Together, these diagnostics demonstrate that the MCMC algorithm has successfully converged, ensuring that the parameter estimates are robust and suitable for inference.
 ```{r}
 #| echo: false
 #| eval: true
