@@ -1,152 +1,1001 @@
-division,state,party
-Division 1,Victoria,Liberal
-Division 2,New South Wales,Liberal
-Division 3,Tasmania,Liberal
-Division 4,New South Wales,Liberal
-Division 5,Queensland,Liberal
-Division 6,New South Wales,Labor
-Division 7,Victoria,Liberal
-Division 8,Western Australia,Labor
-Division 9,Western Australia,Greens
-Division 10,Queensland,Labor
-Division 11,Queensland,Labor
-Division 12,Northern Territory,Liberal
-Division 13,New South Wales,Labor
-Division 14,Western Australia,Labor
-Division 15,Western Australia,National
-Division 16,Victoria,Liberal
-Division 17,South Australia,Liberal
-Division 18,Victoria,Liberal
-Division 19,Western Australia,Labor
-Division 20,South Australia,Labor
-Division 21,New South Wales,Liberal
-Division 22,Queensland,Greens
-Division 23,New South Wales,Liberal
-Division 24,New South Wales,Liberal
-Division 25,Queensland,Labor
-Division 26,Victoria,National
-Division 27,New South Wales,Liberal
-Division 28,Queensland,Liberal
-Division 29,Tasmania,Liberal
-Division 30,South Australia,Liberal
-Division 31,New South Wales,Liberal
-Division 32,Victoria,Labor
-Division 33,Tasmania,Liberal
-Division 34,New South Wales,Liberal
-Division 35,Western Australia,Labor
-Division 36,New South Wales,Liberal
-Division 37,Tasmania,Greens
-Division 38,Tasmania,Labor
-Division 39,Victoria,Greens
-Division 40,South Australia,Labor
-Division 41,New South Wales,Other
-Division 42,New South Wales,Other
-Division 43,Tasmania,Labor
-Division 44,Tasmania,National
-Division 45,Queensland,Liberal
-Division 46,Australian Capital Territory,Other
-Division 47,Queensland,Labor
-Division 48,Queensland,Other
-Division 49,South Australia,Liberal
-Division 50,Victoria,National
-Division 51,South Australia,Liberal
-Division 52,Victoria,Labor
-Division 53,South Australia,National
-Division 54,Queensland,Liberal
-Division 55,Queensland,Labor
-Division 56,South Australia,Liberal
-Division 57,New South Wales,Other
-Division 58,Northern Territory,Liberal
-Division 59,New South Wales,Labor
-Division 60,Western Australia,Labor
-Division 61,New South Wales,Liberal
-Division 62,South Australia,Liberal
-Division 63,Queensland,Labor
-Division 64,Tasmania,Labor
-Division 65,South Australia,Labor
-Division 66,Victoria,Labor
-Division 67,Queensland,Liberal
-Division 68,Queensland,Liberal
-Division 69,Tasmania,Labor
-Division 70,South Australia,National
-Division 71,Australian Capital Territory,Labor
-Division 72,Western Australia,Labor
-Division 73,Queensland,National
-Division 74,Victoria,Labor
-Division 75,Western Australia,Labor
-Division 76,Tasmania,Labor
-Division 77,Queensland,Liberal
-Division 78,Western Australia,Liberal
-Division 79,Queensland,Labor
-Division 80,Queensland,Liberal
-Division 81,Victoria,Labor
-Division 82,New South Wales,Liberal
-Division 83,Victoria,Liberal
-Division 84,Queensland,National
-Division 85,Western Australia,Liberal
-Division 86,New South Wales,Labor
-Division 87,Queensland,Liberal
-Division 88,New South Wales,Liberal
-Division 89,Tasmania,Liberal
-Division 90,South Australia,Labor
-Division 91,Victoria,Liberal
-Division 92,New South Wales,Labor
-Division 93,Tasmania,Labor
-Division 94,South Australia,Labor
-Division 95,Victoria,Liberal
-Division 96,Victoria,Labor
-Division 97,Western Australia,Liberal
-Division 98,Queensland,Liberal
-Division 99,South Australia,Liberal
-Division 100,New South Wales,Labor
-Division 101,South Australia,Labor
-Division 102,New South Wales,Labor
-Division 103,Victoria,Labor
-Division 104,Victoria,Labor
-Division 105,South Australia,Other
-Division 106,Western Australia,Labor
-Division 107,Tasmania,Liberal
-Division 108,Victoria,Labor
-Division 109,Queensland,Liberal
-Division 110,Victoria,Labor
-Division 111,Australian Capital Territory,Labor
-Division 112,Victoria,Liberal
-Division 113,Victoria,Liberal
-Division 114,Victoria,Liberal
-Division 115,Tasmania,Labor
-Division 116,Victoria,Labor
-Division 117,New South Wales,Labor
-Division 118,Victoria,Labor
-Division 119,Victoria,Greens
-Division 120,Northern Territory,Labor
-Division 121,South Australia,Liberal
-Division 122,New South Wales,Liberal
-Division 123,New South Wales,Labor
-Division 124,New South Wales,Liberal
-Division 125,New South Wales,National
-Division 126,New South Wales,Labor
-Division 127,Queensland,Labor
-Division 128,New South Wales,Other
-Division 129,Queensland,Labor
-Division 130,Australian Capital Territory,Liberal
-Division 131,Tasmania,Greens
-Division 132,New South Wales,National
-Division 133,New South Wales,Labor
-Division 134,Northern Territory,Labor
-Division 135,South Australia,National
-Division 136,Victoria,Labor
-Division 137,Tasmania,National
-Division 138,South Australia,Liberal
-Division 139,New South Wales,Labor
-Division 140,Victoria,Other
-Division 141,Queensland,Greens
-Division 142,Victoria,National
-Division 143,Western Australia,Labor
-Division 144,Victoria,Labor
-Division 145,Queensland,Liberal
-Division 146,Tasmania,Liberal
-Division 147,South Australia,Liberal
-Division 148,Victoria,Labor
-Division 149,New South Wales,National
-Division 150,New South Wales,Labor
-Division 151,Victoria,Liberal
+vendor,current_price,old_price,month
+Walmart,5.357,33.212,3
+Walmart,55.099,17.846,11
+Walmart,49.928,38.91,7
+Walmart,28.216,35.012,10
+Walmart,31.141,57.162,5
+Walmart,49.416,43.181,8
+Loblaws,56.026,41.715,2
+Loblaws,16.816,40.432,4
+Walmart,21.151,28.825,6
+Walmart,18.493,36.389,1
+Loblaws,0.849,30.928,3
+Walmart,11.384,37.474,9
+Loblaws,30.946,27.263,3
+Walmart,14.627,22.751,11
+Loblaws,26.977,55.233,2
+Loblaws,45.947,25.872,10
+Walmart,4.598,25.265,10
+Loblaws,45.948,24.172,9
+Loblaws,37.287,49.125,4
+Walmart,44.154,12.45,11
+Loblaws,30.361,1.664,4
+Loblaws,31.668,7.488,11
+Loblaws,6.018,2.457,5
+Loblaws,24.087,6.795,1
+Loblaws,2.711,20.636,7
+Walmart,50.273,41.393,9
+Loblaws,18.318,3.75,5
+Walmart,21.118,54.823,1
+Walmart,4.076,52.272,1
+Loblaws,2.077,48.418,1
+Walmart,43.038,57.63,5
+Walmart,40.434,14.292,8
+Loblaws,38.453,1.648,2
+Walmart,50.953,27.755,4
+Walmart,26.901,11.915,4
+Walmart,27.757,29.154,2
+Walmart,59.795,53.462,12
+Loblaws,58.891,10.566,10
+Walmart,52.744,6.852,12
+Loblaws,54.682,57.62,4
+Loblaws,46.202,8.882,10
+Walmart,24.756,38.276,6
+Walmart,6.459,27.287,5
+Walmart,19.986,2.795,5
+Walmart,22.681,49.533,3
+Walmart,57.857,25.597,11
+Loblaws,20.18,58.026,2
+Walmart,53.901,10.065,9
+Loblaws,38.129,9.718,3
+Walmart,45.559,27.386,2
+Loblaws,25.865,18.665,11
+Loblaws,9.443,19.913,2
+Walmart,23.599,54.33,9
+Walmart,1.211,35.951,7
+Walmart,41.872,48.126,12
+Walmart,44.442,50.532,11
+Loblaws,24.757,8.005,11
+Loblaws,8.408,35.149,5
+Loblaws,15.627,47.71,8
+Walmart,26.669,23.18,6
+Walmart,3.659,10.911,12
+Walmart,12.428,21.686,2
+Walmart,44.388,42.25,7
+Loblaws,25.876,14.212,12
+Loblaws,25.984,57.403,4
+Loblaws,27.487,49.431,1
+Loblaws,6.6,46.933,6
+Loblaws,39.285,23.337,3
+Walmart,33.031,42.839,12
+Loblaws,8.283,47.36,12
+Loblaws,12.692,40.001,8
+Loblaws,13.01,7.814,4
+Loblaws,40.448,24.847,1
+Walmart,42.606,1.546,7
+Walmart,2.673,51.612,9
+Walmart,4.362,59.635,12
+Walmart,17.579,34.646,9
+Loblaws,22.491,54.656,10
+Walmart,38.364,21.024,6
+Walmart,45.27,2.482,3
+Walmart,40.277,43.808,8
+Walmart,6.198,30.761,12
+Loblaws,54.175,5.475,8
+Walmart,52.797,15.823,3
+Walmart,22.406,58.607,1
+Loblaws,28.631,53.23,5
+Walmart,3.121,10.495,11
+Walmart,30.178,19.875,10
+Loblaws,10.569,48.537,9
+Walmart,30.098,2.376,4
+Walmart,22.308,10.497,4
+Loblaws,33.697,4.632,10
+Walmart,24.139,22.797,7
+Walmart,28.291,5.735,5
+Walmart,11.55,46.643,4
+Walmart,23.169,44.074,8
+Walmart,43.909,18.119,10
+Walmart,43.991,17.325,2
+Loblaws,31.877,19.802,11
+Walmart,48.158,46.095,4
+Walmart,20.282,20.815,10
+Loblaws,38.725,44.725,2
+Walmart,49.312,29.027,1
+Walmart,18.456,28.984,4
+Walmart,12.146,42.919,3
+Loblaws,38.684,29.662,6
+Walmart,36.616,36.367,11
+Loblaws,24.032,28.379,11
+Loblaws,54.111,55.017,4
+Loblaws,45.745,40.93,7
+Loblaws,57.095,33.628,12
+Walmart,41.391,50.958,12
+Loblaws,31.911,56.052,7
+Walmart,2.466,42.704,10
+Loblaws,1.52,16.58,6
+Loblaws,9.727,26.812,5
+Walmart,10.807,13.617,9
+Walmart,17.566,30.433,10
+Loblaws,37.676,10.457,10
+Loblaws,51.895,33.751,3
+Loblaws,16.535,1.609,5
+Walmart,45.144,23.932,8
+Loblaws,14.076,19.905,3
+Loblaws,14.315,20.727,5
+Walmart,9.937,15.099,3
+Walmart,7.398,44.394,4
+Walmart,53.356,5.429,9
+Walmart,38.657,56.554,12
+Loblaws,59.547,55.831,2
+Loblaws,28.17,1.913,11
+Loblaws,42.886,7.307,11
+Walmart,7.264,5.976,7
+Loblaws,4.972,54.924,12
+Loblaws,34.87,18.323,10
+Walmart,52.22,51.386,8
+Walmart,5.983,25.728,8
+Loblaws,3.05,54.429,1
+Walmart,8.675,6.82,10
+Loblaws,43.22,51.24,11
+Loblaws,57.413,20.465,9
+Loblaws,43.062,19.305,7
+Walmart,54.454,3.727,4
+Walmart,4.59,47.024,12
+Walmart,29.167,35.81,2
+Loblaws,37.647,8.11,8
+Walmart,43.426,13.623,5
+Loblaws,34.431,16.543,4
+Walmart,21.469,24.621,10
+Walmart,42.88,41.444,10
+Loblaws,9.382,37.568,2
+Loblaws,13.295,39.02,7
+Walmart,37.614,24.443,9
+Walmart,20.263,28.965,9
+Walmart,31.041,10.607,6
+Walmart,55.923,48.146,11
+Walmart,12.721,36.036,5
+Loblaws,32.357,29.036,10
+Walmart,2.661,3.822,7
+Walmart,16.637,42.066,5
+Walmart,7.57,12.266,7
+Walmart,9.626,14.33,6
+Loblaws,49.352,43.661,7
+Loblaws,39.355,21.249,4
+Loblaws,15.129,16.626,6
+Loblaws,38.502,47.08,7
+Walmart,46.281,55.65,3
+Walmart,37.184,47.463,1
+Loblaws,13.217,14.567,6
+Walmart,44.614,37.438,7
+Loblaws,24.274,22.314,7
+Loblaws,58.305,11.236,10
+Loblaws,38.613,3.872,3
+Walmart,17.139,3.908,7
+Walmart,36.761,10.842,3
+Loblaws,21.461,59.548,7
+Walmart,8.258,20.982,9
+Walmart,19.21,18.391,10
+Loblaws,1.967,39.485,2
+Loblaws,54.294,8.238,8
+Loblaws,1.964,49.991,6
+Walmart,20.801,58.693,8
+Loblaws,24.575,55.564,10
+Walmart,30.73,37.698,7
+Loblaws,3.405,28.931,8
+Walmart,26.908,45.994,12
+Loblaws,26.099,7.687,1
+Loblaws,47.783,12.238,8
+Walmart,48.49,59.422,4
+Walmart,49.42,42.002,11
+Walmart,0.776,35.254,9
+Walmart,6.369,53.004,12
+Loblaws,31.04,59.615,3
+Walmart,53.22,5.186,5
+Loblaws,26.72,33.432,2
+Walmart,42.201,34.554,3
+Walmart,32.489,9.759,12
+Loblaws,17.093,30.582,2
+Walmart,7.827,21.208,4
+Walmart,16.589,50.3,8
+Walmart,43.7,43.627,4
+Walmart,41.865,24.335,5
+Walmart,2.461,45.84,12
+Walmart,55.653,55.935,3
+Walmart,51.596,13.311,7
+Walmart,45.24,4.223,10
+Loblaws,35.244,56.703,9
+Walmart,16.641,26.458,10
+Loblaws,32.969,16.607,7
+Walmart,58.815,32.584,12
+Walmart,48.563,59.041,11
+Walmart,49.821,5.905,12
+Walmart,49.69,50.821,11
+Walmart,31.104,55.16,8
+Walmart,34.571,58.812,6
+Loblaws,19.028,31.992,7
+Walmart,19.85,39.364,12
+Loblaws,58.17,1.253,10
+Walmart,36.647,11.411,7
+Loblaws,29.798,30.84,11
+Walmart,36.87,5.833,7
+Loblaws,15.847,43.647,12
+Loblaws,12.599,10.027,7
+Walmart,47.625,28.174,3
+Loblaws,19.862,49.289,7
+Walmart,50.965,45.509,5
+Walmart,21.929,14.538,2
+Walmart,21.313,27.721,3
+Walmart,35.633,49.491,12
+Loblaws,39.588,45.76,10
+Loblaws,7.162,33.329,6
+Walmart,2.986,31.592,7
+Loblaws,36.482,47.307,4
+Walmart,48.609,34.416,6
+Loblaws,20.237,23.813,7
+Walmart,25.263,56.001,2
+Walmart,29.2,28.656,8
+Loblaws,41.147,9.585,6
+Walmart,54.579,16.761,5
+Walmart,36.497,52.243,10
+Walmart,8.896,8.346,3
+Loblaws,3.985,45.151,12
+Loblaws,20.072,51.4,7
+Walmart,43.576,2.036,10
+Walmart,50.394,39.892,6
+Loblaws,31.379,35.995,4
+Walmart,1.575,9.879,6
+Loblaws,49.735,29.889,6
+Loblaws,52.356,24.465,6
+Walmart,11.23,33.43,8
+Walmart,56.987,26.466,7
+Walmart,3.755,51.664,1
+Walmart,24.985,54.146,8
+Loblaws,50.215,35.747,12
+Walmart,53.476,12.203,6
+Walmart,32.583,16.378,11
+Walmart,56.26,44.647,4
+Loblaws,29.217,31.553,10
+Loblaws,49.751,17.711,1
+Walmart,9.653,46.747,4
+Loblaws,18.031,25.978,1
+Walmart,28.168,35.267,6
+Loblaws,43.306,54.461,6
+Walmart,22.076,36.763,11
+Walmart,45.426,1.161,9
+Loblaws,15.704,34.285,9
+Walmart,1.844,59.754,11
+Loblaws,42.359,5.22,7
+Loblaws,48.758,12.877,10
+Walmart,59.371,34.339,8
+Walmart,57.364,18.468,4
+Loblaws,30.986,38.077,12
+Loblaws,58.813,18.314,2
+Loblaws,48.194,1.316,11
+Loblaws,51.671,52.681,7
+Loblaws,43.914,22.612,8
+Walmart,41.143,35.149,4
+Loblaws,11.507,41.639,1
+Walmart,20.795,55.81,7
+Loblaws,23.296,54.253,9
+Loblaws,14.676,5.85,2
+Walmart,33.241,1.432,2
+Walmart,26.56,56.6,9
+Walmart,0.579,7.216,10
+Walmart,13.24,20.277,8
+Walmart,43.208,1.436,4
+Walmart,43.316,14.377,10
+Walmart,6.948,32.476,11
+Loblaws,44.621,3.682,2
+Walmart,35.113,55.05,6
+Walmart,19.111,37.725,3
+Walmart,16.584,8.424,7
+Loblaws,21.955,58.988,4
+Loblaws,46.937,56.37,9
+Walmart,50.97,1.833,10
+Walmart,38.653,58.92,2
+Walmart,21.429,31,11
+Walmart,27.685,39.948,11
+Walmart,11.741,44.306,6
+Walmart,5.674,55.859,3
+Walmart,59.669,7.366,10
+Loblaws,20.845,25.303,4
+Walmart,45.912,36.867,11
+Loblaws,27.576,22.055,5
+Loblaws,22.053,15.002,8
+Walmart,21.454,29.689,12
+Loblaws,59.883,52.872,7
+Loblaws,2.137,30.472,7
+Walmart,44.686,32.709,8
+Walmart,41.007,44.131,6
+Walmart,33.453,35.56,4
+Loblaws,47.673,14.305,8
+Loblaws,11.681,32.326,6
+Loblaws,46.135,59.558,5
+Walmart,9.163,16,8
+Loblaws,18.169,39.471,8
+Loblaws,36.709,4.293,12
+Loblaws,4.477,8.405,10
+Walmart,59.731,57.154,11
+Loblaws,49.268,44.838,7
+Loblaws,38.721,53.147,2
+Walmart,27.953,7.745,9
+Walmart,19.97,16.529,9
+Loblaws,13.069,24.628,11
+Loblaws,15.847,6.83,4
+Walmart,5.009,2.084,11
+Walmart,28.747,22.455,9
+Walmart,25.439,36.658,12
+Walmart,49.567,6.567,4
+Walmart,19.731,50.037,8
+Walmart,31.853,15.585,1
+Loblaws,23.905,30.236,3
+Loblaws,47.229,14.287,5
+Loblaws,48.683,13.42,9
+Walmart,14.129,51.553,2
+Loblaws,37.591,57.372,4
+Walmart,58.682,2.987,3
+Walmart,15.628,29.536,8
+Walmart,45.855,43.078,4
+Walmart,59.316,9.176,7
+Walmart,30.927,38.094,8
+Loblaws,3.395,40.395,10
+Loblaws,22.996,45.015,10
+Loblaws,8.849,20.88,11
+Loblaws,41.322,6.991,7
+Loblaws,45.201,24.27,2
+Loblaws,40.694,28.818,4
+Loblaws,7.196,7.579,6
+Loblaws,12.924,46.721,10
+Loblaws,21.593,15.35,8
+Walmart,12.05,29.061,9
+Loblaws,40.087,38.024,9
+Loblaws,51.554,56.609,12
+Walmart,26.351,52.88,11
+Loblaws,47.292,38.033,6
+Walmart,27.649,55.076,11
+Loblaws,29.103,1.217,5
+Loblaws,11.283,19.116,6
+Walmart,50.163,24.839,12
+Loblaws,9.748,48.531,8
+Loblaws,53.029,34.058,12
+Loblaws,44.203,47.646,12
+Walmart,3.854,21.527,1
+Loblaws,54.934,46.001,9
+Loblaws,16.7,29.329,4
+Walmart,50.853,21.958,1
+Walmart,31.121,13.073,9
+Walmart,5.243,48.212,6
+Loblaws,56.41,43.468,11
+Loblaws,57.589,38.222,12
+Loblaws,52.685,11.798,8
+Loblaws,53.093,55.729,12
+Walmart,0.99,26.409,12
+Loblaws,9.264,56.727,11
+Walmart,5,31.746,5
+Loblaws,54.661,53.382,5
+Loblaws,34.013,3.321,1
+Walmart,36.098,46.351,1
+Loblaws,36.303,9.133,6
+Loblaws,20.002,36.596,11
+Walmart,54.08,37.037,3
+Walmart,46.952,42.884,5
+Loblaws,1.686,44.226,4
+Loblaws,18.529,38.405,6
+Walmart,9.44,57.907,6
+Loblaws,36.256,3.639,12
+Loblaws,28.586,22.04,6
+Loblaws,58.606,25.875,9
+Loblaws,28.907,45.718,11
+Walmart,18.82,52.587,6
+Walmart,54.442,48.985,11
+Walmart,47.697,32.03,6
+Walmart,29.633,52.9,5
+Walmart,29.374,33.49,10
+Walmart,23.252,38.339,12
+Loblaws,41.564,9.491,8
+Walmart,31.393,16.97,11
+Walmart,49.935,53.889,10
+Walmart,22.932,1.953,3
+Walmart,25.928,2.798,11
+Walmart,13.623,36.233,7
+Loblaws,58.906,50.297,1
+Walmart,19.12,44.621,9
+Walmart,45.709,55.689,9
+Walmart,40.215,52.15,4
+Loblaws,28.996,37.487,6
+Walmart,38.784,36.493,6
+Loblaws,26.25,55.196,4
+Loblaws,12.034,19.525,1
+Walmart,23.643,11.993,2
+Loblaws,5.733,31.253,5
+Loblaws,15.112,35.328,7
+Walmart,21.926,29.453,4
+Loblaws,31.545,58.688,9
+Loblaws,43.11,5.221,10
+Loblaws,5.524,13.102,6
+Loblaws,21.615,38.064,10
+Walmart,8.68,12.734,4
+Walmart,57.848,30.582,3
+Walmart,30.752,7.219,7
+Walmart,13.275,52.985,4
+Loblaws,22.336,10.532,6
+Loblaws,5.511,59.881,8
+Loblaws,59.06,39.646,12
+Loblaws,1.24,30.286,4
+Loblaws,14.546,43.923,5
+Walmart,23.68,36.305,5
+Loblaws,48.632,24.84,8
+Loblaws,27.523,19.895,12
+Walmart,34.299,55.143,4
+Walmart,40.389,15.837,11
+Loblaws,37.032,18.348,12
+Loblaws,8.843,15.895,3
+Loblaws,34.002,57.453,8
+Walmart,9.16,18.14,12
+Loblaws,30.485,57.044,9
+Walmart,34.848,32.313,11
+Walmart,21.41,20.698,3
+Walmart,36.111,13.216,7
+Walmart,42.025,58.082,10
+Walmart,30.176,7.047,9
+Loblaws,51.924,48.852,6
+Loblaws,48.715,40.438,8
+Walmart,25.504,3.513,1
+Loblaws,51.586,59.422,6
+Walmart,33.621,50.11,3
+Loblaws,40.743,21.36,8
+Walmart,12.373,51.387,2
+Loblaws,27.252,36.582,7
+Walmart,37.564,33.426,7
+Walmart,52.557,40.866,12
+Loblaws,54.507,29.298,5
+Loblaws,59.844,38.893,12
+Walmart,17.398,13.843,12
+Loblaws,55.559,28.609,1
+Loblaws,36.611,20.516,5
+Loblaws,47.741,32.147,4
+Loblaws,26.764,11.176,10
+Walmart,4.345,45.02,8
+Walmart,22.673,23.859,4
+Loblaws,47.954,48.726,6
+Loblaws,51.983,53.33,6
+Walmart,35.122,27.028,2
+Walmart,28.76,34.613,6
+Walmart,5.652,55.72,10
+Walmart,57.564,45.628,10
+Walmart,1.504,17.858,8
+Loblaws,43.143,58.714,8
+Walmart,24.958,21.23,10
+Loblaws,0.855,17.967,11
+Walmart,46.793,17.594,3
+Walmart,3.031,54.529,12
+Walmart,37.75,26.493,11
+Loblaws,51.958,45.884,9
+Walmart,27.118,42.843,2
+Walmart,12.958,49.917,8
+Loblaws,12.324,21.715,7
+Loblaws,12.92,38.874,10
+Loblaws,30.22,56.504,2
+Loblaws,50.744,36.697,8
+Walmart,11.701,19.518,9
+Walmart,2.454,56.052,8
+Loblaws,42.04,2.818,3
+Walmart,5.846,47.249,5
+Loblaws,8.222,29.061,11
+Walmart,33.187,44.911,10
+Walmart,56.382,31.567,6
+Loblaws,10.949,6.874,12
+Loblaws,16.31,13.903,10
+Walmart,17.807,20.547,8
+Walmart,57.767,17.379,4
+Walmart,54.104,44.805,6
+Loblaws,37.961,33.132,11
+Walmart,42.884,22.389,10
+Walmart,31.355,34.834,5
+Walmart,10.419,27.334,6
+Walmart,57.447,29.367,9
+Walmart,2.682,42.584,9
+Loblaws,24.719,32.668,4
+Walmart,18.009,36.847,5
+Walmart,9.965,57.665,1
+Loblaws,32.477,27.224,3
+Walmart,40.265,7.647,8
+Walmart,24.496,30.296,7
+Loblaws,43.41,40.991,6
+Loblaws,6.848,12.595,4
+Loblaws,49.098,53.904,5
+Walmart,48.145,54.26,7
+Walmart,39.082,34.898,2
+Loblaws,9.16,49.268,3
+Loblaws,29.982,1.176,8
+Walmart,51.171,39.51,6
+Loblaws,55.447,46.896,1
+Walmart,35.593,1.347,9
+Loblaws,55.96,50.422,6
+Walmart,49.686,53.243,4
+Loblaws,58.691,34.122,11
+Loblaws,46.575,53.631,7
+Loblaws,59.348,30.605,1
+Walmart,52.981,19.463,4
+Loblaws,6.579,1.068,6
+Loblaws,22.329,33.065,9
+Loblaws,30.797,56.235,6
+Walmart,42.375,37.567,1
+Loblaws,36.805,48.957,6
+Loblaws,19.524,49.91,5
+Walmart,19.393,43.288,7
+Loblaws,45.297,7.055,9
+Walmart,12.884,19.874,10
+Walmart,30.296,51.488,11
+Walmart,48.395,45.49,6
+Walmart,52.237,22.163,10
+Walmart,42.442,47.379,6
+Loblaws,50.125,34.621,7
+Walmart,32.024,19.539,9
+Loblaws,57.168,18.103,4
+Loblaws,32.131,52.447,12
+Loblaws,56.731,7.765,11
+Loblaws,21.341,10.543,11
+Loblaws,12.875,1.467,12
+Walmart,39.479,7.082,3
+Walmart,54.744,2.854,10
+Walmart,19.545,39.117,1
+Loblaws,54.178,34.595,1
+Walmart,57.852,34.653,4
+Loblaws,35.535,38.49,7
+Walmart,17.8,56.047,9
+Walmart,9.432,53.174,6
+Loblaws,13.369,12.355,1
+Loblaws,49.515,32.92,6
+Walmart,8.525,4.087,3
+Loblaws,49.321,21.217,3
+Loblaws,34.22,33.34,1
+Walmart,29.491,23.698,5
+Walmart,4.32,17.894,8
+Walmart,35.565,52.865,9
+Walmart,11.984,12.501,1
+Loblaws,55.587,43.016,8
+Loblaws,17.972,52.443,11
+Walmart,48.616,31.837,8
+Loblaws,44.241,9.236,10
+Loblaws,52.661,48.793,6
+Walmart,37.287,14.362,1
+Walmart,59.44,30.195,3
+Loblaws,37.177,38.666,4
+Loblaws,52.617,11.532,12
+Walmart,22.418,8.201,8
+Walmart,47.12,31.791,3
+Loblaws,10.517,33.16,3
+Walmart,26.161,21.355,10
+Loblaws,20.46,37.993,12
+Loblaws,44.785,8.803,9
+Loblaws,48.279,10.062,8
+Walmart,5.45,36.541,4
+Walmart,38.362,42.809,3
+Walmart,41.364,56.183,1
+Walmart,16.671,41.3,12
+Loblaws,39.669,2.378,8
+Walmart,29.156,15.303,6
+Walmart,23.483,49.369,9
+Walmart,41.874,36.91,4
+Loblaws,50.645,57.428,8
+Walmart,54.487,58.153,8
+Walmart,8.519,40.769,9
+Walmart,53.168,39.072,2
+Loblaws,42.185,58.252,9
+Loblaws,56.156,56.329,12
+Loblaws,48.826,30.471,4
+Walmart,18.561,47.976,10
+Loblaws,20.564,54.199,11
+Loblaws,20.05,22.741,1
+Loblaws,1.417,41.583,3
+Loblaws,54.58,29.19,8
+Loblaws,0.567,52.716,2
+Walmart,38.029,44.548,5
+Loblaws,47.199,29.407,6
+Walmart,53.534,59.427,6
+Walmart,29.105,27.22,7
+Walmart,23.649,24.914,12
+Walmart,13.374,52.257,8
+Walmart,41.008,16.567,5
+Loblaws,15.932,23.061,4
+Walmart,7.285,34.996,12
+Walmart,36.76,51.628,12
+Loblaws,31.994,40.706,9
+Loblaws,46.912,33.177,2
+Loblaws,30.14,18.889,7
+Walmart,4.264,29.208,9
+Walmart,8.262,50.898,5
+Walmart,31.322,29.669,7
+Walmart,7.386,19.104,1
+Walmart,4.482,16.112,4
+Loblaws,21.179,15.688,6
+Walmart,3.52,19.285,4
+Loblaws,54.638,18.145,10
+Walmart,46.056,53.19,2
+Loblaws,19.516,44.534,5
+Walmart,52.643,32.06,7
+Walmart,33.078,8.257,3
+Walmart,30.382,41.914,6
+Loblaws,11.875,55.834,8
+Walmart,23.064,57.976,12
+Walmart,9.675,14.482,5
+Walmart,17.006,35.464,2
+Walmart,57.943,15.224,11
+Walmart,47.394,36.958,10
+Walmart,13.876,40.998,2
+Walmart,45.534,47.52,7
+Walmart,32.87,50.384,9
+Loblaws,51.377,15.647,10
+Walmart,8.106,9.934,2
+Loblaws,24.256,59.906,2
+Loblaws,37.52,7.043,2
+Walmart,53.992,28.314,9
+Walmart,53.326,6.733,10
+Walmart,56.984,59.209,11
+Loblaws,6.812,14.134,3
+Loblaws,41.164,2.644,10
+Loblaws,50.596,24.82,3
+Walmart,50.217,33.949,7
+Loblaws,52.912,21.332,3
+Loblaws,25.631,9.64,12
+Walmart,35.554,52.619,5
+Loblaws,47.271,30,10
+Walmart,24.494,1.6,9
+Walmart,31.07,56.571,5
+Loblaws,38.395,28.038,12
+Loblaws,33.853,43.846,2
+Walmart,10.579,29.48,10
+Loblaws,10.102,56.269,7
+Walmart,11.094,51.302,3
+Walmart,22.48,12.247,5
+Loblaws,35.409,37.789,9
+Loblaws,36.732,4.999,11
+Loblaws,37.38,59.58,7
+Walmart,33.367,20.836,8
+Walmart,49.367,14.413,12
+Walmart,41.364,37.135,5
+Walmart,57.125,5.131,7
+Loblaws,44.734,44.085,11
+Walmart,57.077,17.841,5
+Walmart,23.594,49.315,5
+Walmart,24.162,32.136,5
+Walmart,34.251,56.874,5
+Loblaws,12.317,57.225,1
+Walmart,47.835,11.023,1
+Loblaws,54.68,16.213,5
+Walmart,24.423,43.19,8
+Walmart,20.68,44.731,11
+Loblaws,46.835,39.353,11
+Loblaws,45.023,8.806,1
+Loblaws,58.2,40.403,3
+Loblaws,6.091,17.927,3
+Loblaws,16.133,35.508,6
+Loblaws,41.147,44.314,7
+Loblaws,6.19,45.234,6
+Walmart,22.036,2.612,4
+Walmart,15.438,2.859,1
+Walmart,31.332,41.87,11
+Loblaws,41.209,9.348,4
+Loblaws,14.561,54.034,1
+Walmart,36.819,58.006,4
+Walmart,33.711,50.952,5
+Walmart,24.597,16.258,10
+Loblaws,33.317,34.728,1
+Loblaws,27.763,29.132,6
+Loblaws,27.22,37.553,2
+Loblaws,7.981,18.837,9
+Loblaws,41.674,11.084,8
+Loblaws,48.876,8.957,10
+Walmart,58.644,10.547,11
+Walmart,10.691,56.636,7
+Walmart,25.883,29.842,6
+Loblaws,50.979,1.105,2
+Walmart,9.016,55.461,5
+Walmart,50.721,31.977,2
+Loblaws,20.077,39.393,4
+Walmart,17.256,36.161,12
+Loblaws,27.289,39.527,9
+Loblaws,23.125,45.734,12
+Walmart,41.507,48.49,2
+Loblaws,34.118,57.697,7
+Walmart,45.526,16.375,5
+Walmart,33.808,57.511,8
+Loblaws,51.741,41.325,12
+Loblaws,2.649,19.206,2
+Walmart,20.524,38.849,7
+Loblaws,26.131,52.297,12
+Loblaws,6.125,5.867,9
+Loblaws,18.944,45.54,5
+Walmart,18.403,55.629,8
+Loblaws,1.067,26.656,12
+Loblaws,2.168,38.591,11
+Loblaws,11.663,16.504,2
+Loblaws,28.774,6.163,2
+Loblaws,56.332,15.43,1
+Walmart,17.083,29.614,3
+Loblaws,25.381,42.244,10
+Walmart,31.689,34.452,4
+Loblaws,42.136,31.513,5
+Walmart,22.282,45.741,2
+Walmart,51.332,45.768,12
+Walmart,49.101,34.757,2
+Loblaws,19.945,54.226,5
+Walmart,23.541,14.096,3
+Walmart,30.875,13.863,12
+Walmart,17.299,40.436,4
+Loblaws,39.664,24.783,6
+Walmart,22.57,51.84,4
+Walmart,52.408,13.348,5
+Loblaws,25.438,50.26,6
+Loblaws,37.119,28.802,4
+Loblaws,47.399,22.179,3
+Walmart,29.663,29.569,6
+Loblaws,44.881,19.049,4
+Loblaws,52.975,17.011,8
+Loblaws,50.657,59.791,12
+Walmart,21.396,5.458,5
+Loblaws,6.409,34.084,11
+Walmart,31.455,46.741,1
+Walmart,41.407,18.204,4
+Walmart,5.175,35.155,12
+Loblaws,29.371,39.993,1
+Walmart,41.467,35.651,3
+Walmart,56.589,16.295,1
+Loblaws,4.529,52.482,4
+Loblaws,42.966,27.404,7
+Walmart,59.708,25.72,2
+Walmart,37.985,18.826,10
+Walmart,25.512,57.063,2
+Loblaws,28.093,39.659,7
+Loblaws,3.132,4.071,11
+Loblaws,20.134,43.706,3
+Walmart,31.692,42.736,10
+Loblaws,55.69,31.161,1
+Loblaws,34.355,43.466,9
+Loblaws,17.573,7.037,7
+Walmart,11.102,35.983,11
+Loblaws,27.49,38.081,9
+Walmart,2.78,23.224,4
+Walmart,0.75,14.565,9
+Loblaws,26.731,24.505,8
+Loblaws,37.645,27.183,4
+Loblaws,39.46,57.979,7
+Walmart,54.377,55.265,4
+Walmart,29.357,14.688,5
+Walmart,51.213,32.367,7
+Loblaws,7.325,43.016,8
+Walmart,43.933,9.946,5
+Loblaws,58.587,52.111,3
+Walmart,55.424,28.948,3
+Loblaws,13.76,51.288,2
+Loblaws,39.389,22.453,4
+Loblaws,27.66,20.623,2
+Walmart,54.71,3.768,9
+Loblaws,12.88,5.799,2
+Walmart,28.853,11.041,5
+Walmart,18.273,19.228,4
+Walmart,45.246,57.729,11
+Walmart,5.952,47.124,12
+Loblaws,17.087,6.901,12
+Loblaws,35.016,49.067,5
+Walmart,47.66,38.074,8
+Loblaws,32.946,49.83,5
+Walmart,33.466,47.531,1
+Walmart,5.407,26.363,4
+Loblaws,24.801,57.56,10
+Walmart,54.294,38.335,1
+Walmart,9.328,14.413,12
+Walmart,3.303,48.091,12
+Walmart,21.343,14.808,5
+Walmart,37.501,43.434,6
+Walmart,6.41,25.004,12
+Loblaws,18.615,27.056,11
+Walmart,58.999,9.793,11
+Walmart,11.355,20.125,9
+Walmart,47.338,28.807,1
+Walmart,20.209,41.881,2
+Loblaws,19.727,33.543,7
+Loblaws,36.155,34.154,12
+Walmart,13.254,11.679,1
+Loblaws,41.985,1.796,7
+Walmart,18.575,51.109,2
+Loblaws,39.703,31.116,9
+Walmart,39.054,9.375,11
+Walmart,54.461,48.588,6
+Walmart,18.325,27.261,7
+Loblaws,6.172,14.795,8
+Walmart,57.549,34.372,1
+Loblaws,47.277,28.325,5
+Loblaws,45.239,59.522,9
+Walmart,9.518,19.014,9
+Walmart,54.132,30.491,3
+Loblaws,26.066,2.619,12
+Loblaws,49.145,25.959,10
+Loblaws,15.137,45.459,10
+Loblaws,19.619,9.311,12
+Walmart,58.569,46.573,5
+Walmart,47.218,46.334,12
+Walmart,23.621,33.756,2
+Loblaws,13.013,13.863,12
+Loblaws,56.647,49.648,5
+Loblaws,19.718,32.354,3
+Walmart,25.53,33.987,5
+Loblaws,29.356,12.724,11
+Loblaws,47.298,17.796,5
+Loblaws,56.845,29.723,7
+Walmart,52.294,32.458,3
+Loblaws,37.472,9.717,10
+Loblaws,22.093,25.145,9
+Loblaws,9.296,18.759,8
+Loblaws,11.874,18.288,1
+Walmart,43.012,12.772,6
+Loblaws,50.041,2.45,2
+Walmart,55.96,3.188,10
+Walmart,53.104,31.765,11
+Walmart,32.416,46.013,3
+Loblaws,49.069,54.245,10
+Walmart,1.011,51.745,7
+Loblaws,29.536,53.531,6
+Walmart,0.888,13.372,3
+Loblaws,28.94,11.067,1
+Loblaws,34.443,46.221,12
+Loblaws,22.526,12.547,9
+Loblaws,36.077,36.319,7
+Walmart,54.535,11.931,5
+Loblaws,36.657,42.203,11
+Walmart,10.243,24.283,2
+Loblaws,7.264,18.907,8
+Walmart,27.517,41.165,6
+Loblaws,19.422,33.402,9
+Walmart,11.814,4.943,7
+Walmart,58.626,19.98,11
+Loblaws,25.139,12.905,8
+Loblaws,26.606,12.471,10
+Loblaws,30.863,26.751,9
+Loblaws,23.397,27.357,1
+Loblaws,53.345,15.436,3
+Loblaws,16.45,20.59,2
+Loblaws,56.923,16.645,10
+Walmart,1.811,22.222,4
+Walmart,47.671,5.316,2
+Walmart,24.507,57.994,10
+Loblaws,37.142,24.737,9
+Loblaws,11.737,46.151,7
+Walmart,57.059,57.538,4
+Loblaws,40.113,15.293,7
+Walmart,45.676,18.992,5
+Loblaws,36.604,14.679,9
+Walmart,40.463,25.683,4
+Walmart,32.529,48.97,5
+Walmart,54.202,52.382,9
+Walmart,39.262,45.048,7
+Loblaws,4.654,42.899,1
+Loblaws,38.791,22.148,9
+Loblaws,52.303,6.991,12
+Loblaws,54.105,31.67,1
+Loblaws,15.589,34.67,4
+Loblaws,5.182,36.57,8
+Walmart,12.387,3.567,10
+Walmart,43.338,11.412,11
+Walmart,20.375,18.687,6
+Walmart,37.316,27.148,3
+Walmart,46.182,29.14,2
+Walmart,22.618,39.439,7
+Walmart,31.155,27.695,4
+Walmart,9.225,51.593,10
+Loblaws,17.28,50.582,10
+Walmart,57.142,32.511,8
+Walmart,31.609,10.357,5
+Loblaws,21.739,28.709,9
+Loblaws,50.823,1.278,9
+Walmart,29.894,35.77,10
+Loblaws,53.691,11.424,12
+Loblaws,37.457,9.181,8
+Walmart,10.324,11.312,12
+Loblaws,6.673,41.935,12
+Loblaws,33.836,55.191,1
+Loblaws,20.797,6.698,6
+Loblaws,33.535,42.473,3
+Walmart,21.018,21.759,4
+Walmart,36.781,40.999,6
+Walmart,53.31,21.863,4
+Walmart,47.138,30.164,2
+Walmart,34.684,25.527,8
+Walmart,30.008,52.209,8
+Loblaws,11.656,9.14,11
+Walmart,4.562,1.927,10
+Loblaws,26.335,32.078,1
+Walmart,36.034,53.324,7
+Loblaws,20.748,44.509,12
+Walmart,9.264,36.908,6
+Loblaws,52.232,30.878,2
+Loblaws,54.317,10.6,1
+Walmart,31.979,29.084,8
+Walmart,7.629,48.94,3
+Loblaws,1.275,24.243,4
+Loblaws,42.67,35.059,6
+Loblaws,34.202,3.711,9
+Walmart,12.398,40.576,1
+Walmart,2.367,44.43,9
+Loblaws,27.71,7.513,11
+Walmart,21.486,58.501,6
+Loblaws,25.786,37.003,10
+Walmart,28.819,26.097,8
+Loblaws,41.419,57.499,9
+Walmart,1.205,40.244,4
+Loblaws,48.271,10.85,5
+Loblaws,59.224,22.139,11
+Loblaws,53.354,55.038,3
+Loblaws,56.827,47.058,3
+Walmart,41.244,51.356,8
+Loblaws,11.183,19.253,1
+Loblaws,17.608,10.696,8
+Walmart,38.728,56.314,4
+Walmart,55.195,39.771,11
+Walmart,2.471,13.634,6
+Walmart,12.802,15.959,9
+Walmart,43.126,10.383,3
+Walmart,32.711,57.394,12
+Walmart,58.919,41.449,8
+Loblaws,10.335,9.743,11
+Loblaws,27.307,27.461,12
+Loblaws,24.623,2.491,6
+Walmart,56.953,58.321,12
+Loblaws,14.531,3.115,8
+Walmart,34.453,9.482,10
+Walmart,48.472,12.402,4
+Loblaws,24.841,31.452,3
+Walmart,25.441,46.646,2
+Walmart,35.684,10.55,11
+Walmart,23.983,43.607,2
+Walmart,7.097,30.277,1
+Walmart,19.853,47.113,1
+Loblaws,7.497,43.366,9
+Loblaws,48.216,33.43,5
+Loblaws,38.646,59.098,5
+Walmart,4.093,54.55,8
+Loblaws,27.763,8.574,7
+Loblaws,51.554,8.262,7
+Loblaws,37.809,46.163,4
+Walmart,9.945,34.921,7
+Walmart,10.051,49.454,9
+Walmart,18.933,30.87,1
+Walmart,43.984,1.063,7
+Walmart,31.273,38.654,4
+Walmart,31,17.512,3
+Loblaws,54.055,16.016,7
+Walmart,51.873,11.976,5
+Walmart,41.933,21.528,5
+Walmart,51.043,24.277,10
+Walmart,37.343,36.756,1
+Walmart,8.582,9.813,10
+Walmart,37.766,11.024,10
+Loblaws,5.618,11.279,8
+Walmart,30.876,26.614,1
+Loblaws,34.883,37.174,9
+Loblaws,7.263,22.847,7
+Walmart,45.402,35.301,9
+Loblaws,50.776,2.445,12
+Walmart,30.189,19.82,7
+Walmart,40.098,20.946,9
+Walmart,21.774,55.216,3
+Loblaws,37.44,17.284,12
+Walmart,53.648,36.769,10
+Loblaws,19.903,40.663,7
+Walmart,0.875,56.085,12
+Loblaws,9.512,46.577,5
+Loblaws,35.464,40.692,6
+Loblaws,4.873,34.984,10
+Loblaws,46.435,3.809,9
+Walmart,14.369,43.353,3
+Walmart,3.327,41.087,2
+Loblaws,52.597,20.059,3
+Walmart,30.442,2.9,1
+Walmart,33.337,34.371,1
+Walmart,44.418,2.856,6
+Loblaws,8.457,4.508,8
+Walmart,31.571,45.949,4
+Loblaws,10.933,35.254,11
+Walmart,16.692,46.197,3
