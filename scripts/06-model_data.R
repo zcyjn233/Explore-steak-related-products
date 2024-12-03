@@ -8,7 +8,7 @@
 #### Workspace setup ####
 library(tidyverse)
 library(rstanarm)
-
+library(arrow)
 #### Read data ####
 analysis_data <- read_parquet("data/02-analysis_data/analysis_data.parquet")
 
@@ -24,9 +24,26 @@ first_model <-
     seed = 26
   )
 
+# Inspect the data to understand its structure
+str(analysis_data)
+
+# Build the linear regression model (second model)
+second_model <- lm(current_price ~ month + old_price + vendor, data = analysis_data)
+
+# Summary of the model to evaluate its performance
+summary(second_model)
+
+# Diagnostics: Check residuals and model fit
+par(mfrow = c(2, 2))
+plot(second_model)
 
 #### Save model ####
 saveRDS(
   first_model,
   file = "models/first_model.rds"
+)
+
+saveRDS(
+  second_model,
+  file = "models/second_model.rds"
 )
