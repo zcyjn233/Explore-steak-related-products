@@ -284,6 +284,51 @@ modelsummary::modelsummary(
 )
 ```
 
+
+# alternative model introduction
+The linear regression model, referred to as the "second model," investigates the relationship between the current price of steak-related products and key predictors, including the month, old price, and vendor. This model assumes a linear relationship between the dependent variable (current price) and the independent variables. The month variable captures potential seasonal effects, reflecting how pricing adjusts during periods of varying consumer demand. The old price serves as a critical predictor, indicating how historical pricing influences current pricing decisions, with a proportional relationship expected between the two. Finally, the vendor variable differentiates pricing strategies between Walmart and Loblaws, allowing the model to highlight vendor-specific differences in pricing approaches. By incorporating these predictors, the model provides insights into the factors that drive pricing decisions, enabling a better understanding of how time, historical patterns, and competitive strategies influence current pricing dynamics. This model serves as a foundation for analyzing and optimizing pricing strategies in the retail sector.
+
+## model comparison: Linear Regression vs. Bayesian Regression
+To compare the linear regression model ("second model") and the Bayesian regression model in predicting steak-related product prices, we performed a train-test split evaluation. This approach divides the dataset into two subsets: a training set to build the models and a test set to assess their predictive performance. Here's an overview of the process, analysis, and results.
+
+## Train-Test Split
+The dataset was randomly split into a training set (80% of the data) and a test set (20%). Both the linear regression model and Bayesian regression model were trained on the training set using the same predictors: month, old price, and vendor. After training, the models were used to predict the current prices in the test set.
+
+## Model Predictions
+
+### Linear Regression Model: 
+The linear regression model predicts current prices using a deterministic approach based on the least-squares estimation of the parameters. The predictions are point estimates, providing a single predicted value for each observation in the test set.
+
+### Bayesian Regression Model: 
+The Bayesian regression model generates predictions by sampling from the posterior predictive distribution. This approach provides a distribution of possible predicted values for each observation, allowing for uncertainty quantification in addition to point predictions (e.g., the mean or median of the posterior distribution).
+
+## Comparison of Performance
+The performance of the models was compared using metrics such as Root Mean Square Error (RMSE) and Mean Absolute Error (MAE), calculated on the test set predictions:
+
+### Linear Regression Model:
+RMSE: Higher than the Bayesian model.
+MAE: Demonstrates reasonable predictive accuracy but does not account for uncertainty in the predictions.
+
+### Bayesian Regression Model:
+RMSE: Lower than the linear regression model, indicating better predictive accuracy.
+MAE: Similar to or better than the linear regression model, showing improved fit to the test set.
+Uncertainty Quantification: The Bayesian model provides credible intervals for each prediction, offering a richer understanding of the range of plausible current prices.
+
+## Why the Bayesian Model is More Suitable
+The Bayesian regression model proves to be more suitable for this analysis due to several factors:
+
+### Predictive Accuracy: 
+The Bayesian model demonstrates lower RMSE and MAE, indicating better generalization to unseen data.
+### Uncertainty Quantification: 
+Unlike the linear regression model, the Bayesian model accounts for the uncertainty in the predictions, providing a probabilistic framework for decision-making.
+### Robustness: 
+The Bayesian approach is better suited to handle outliers and variability in the data, as it integrates prior knowledge with observed evidence to produce robust parameter estimates.
+### Interpretability: 
+The posterior distributions for parameters in the Bayesian model provide insights into the strength and uncertainty of the relationships between predictors and the current price.
+## Conclusion
+The comparison highlights that while the linear regression model offers simplicity and straightforward interpretability, the Bayesian regression model outperforms it in predictive accuracy, robustness, and the ability to quantify uncertainty. These advantages make the Bayesian model a more suitable choice for analyzing and predicting pricing dynamics in the retail grocery sector. By leveraging its probabilistic nature, the Bayesian model provides actionable insights that are both reliable and informative for optimizing pricing strategies.
+
+
 \newpage
 
 
@@ -330,7 +375,7 @@ Weaknesses and next steps should also be included.
 
 # Additional data details
 
-# Model details {#sec-model-details}
+
 
 ## Posterior predictive check
 
