@@ -28,14 +28,14 @@ first_model <-
 str(analysis_data)
 
 # Build the linear regression model (second model)
-second_model <- lm(current_price ~ month + old_price + vendor, data = analysis_data)
+alternative_model <- lm(current_price ~ month + old_price + vendor, data = analysis_data)
 
 # Summary of the model to evaluate its performance
-summary(second_model)
+summary(alternative_model)
 
 # Diagnostics: Check residuals and model fit
 par(mfrow = c(2, 2))
-plot(second_model)
+plot(alternative_model)
 
 #### Save model ####
 saveRDS(
@@ -44,6 +44,6 @@ saveRDS(
 )
 
 saveRDS(
-  second_model,
+  alternative_model,
   file = "models/second_model.rds"
 )
