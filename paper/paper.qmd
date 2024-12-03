@@ -87,7 +87,7 @@ The analysis focuses on three main outcome variables:
 3.Vendor Comparisons: Walmart and Loblaws
 
 ```{r}
-#| label: box-plot
+#| label: fig-bll1
 #| fig-cap: Current prices of steak-related products by vendor and month, showing Walmart's consistent lower pricing and Loblaws' broader range with seasonal price fluctuations.
 #| echo: false
 #### Read data ####
@@ -97,16 +97,18 @@ analysis_data <- read_parquet("/Users/lucky/Desktop/Explore-steak-related-produc
 analysis_data <- analysis_data %>%
   mutate(month = factor(month, levels = 1:12, labels = month.abb[1:12]))
 
-#### Distribution of current_price by vendor ####
+#### Distribution of current_price by vendor with actual data overlay ####
 ggplot(analysis_data, aes(x = reorder(vendor, current_price, FUN = median), y = current_price, fill = vendor)) +
-  geom_boxplot(outlier.colour = "red", outlier.shape = 16, outlier.size = 2) +
-  coord_flip() + # Flip the coordinates for better readability
+  geom_boxplot(outlier.colour = "red", outlier.shape = 16, outlier.size = 2, alpha = 0.7) +  # Add transparency to boxplots
+  geom_jitter(aes(color = vendor), width = 0.2, size = 1.5, alpha = 0.5) +  # Overlay actual data points with jitter for clarity
+  coord_flip() +  # Flip the coordinates for better readability
   labs(
     title = "Distribution of Current Price by Vendor",
     subtitle = "Steak-related products",
     x = "Vendor",
     y = "Current Price (CAD)",
-    fill = "Vendor"
+    fill = "Vendor",
+    color = "Actual Data"
   ) +
   theme_light() +
   theme(
@@ -115,15 +117,17 @@ ggplot(analysis_data, aes(x = reorder(vendor, current_price, FUN = median), y = 
     axis.text.x = element_text(angle = 45, hjust = 1)
   )
 
-#### Distribution of current_price by month ####
+#### Distribution of current_price by month with actual data overlay ####
 ggplot(analysis_data, aes(x = month, y = current_price, fill = month)) +
-  geom_boxplot(outlier.colour = "red", outlier.shape = 16, outlier.size = 2) +
+  geom_boxplot(outlier.colour = "red", outlier.shape = 16, outlier.size = 2, alpha = 0.7) +  # Add transparency to boxplots
+  geom_jitter(aes(color = month), width = 0.2, size = 1.5, alpha = 0.5) +  # Overlay actual data points with jitter for clarity
   labs(
     title = "Monthly Distribution of Current Price",
     subtitle = "Steak-related products",
     x = "Month",
     y = "Current Price (CAD)",
-    fill = "Month"
+    fill = "Month",
+    color = "Actual Data"
   ) +
   theme_light() +
   theme(
@@ -142,7 +146,7 @@ The second plot displays the distribution of current prices across months, captu
 
 Together, these visualizations reveal insights into vendor-specific pricing strategies and seasonal variations, critical for understanding consumer and market behavior in the steak-related product segment.
 ```{r}
-#| label: scatter-plot
+#| label: fig-bll2
 #| fig-cap: Scatter plot showing a positive relationship between old and current prices, with outliers indicating significant markdowns on premium products.
 #| echo: false
 #| warning: false
@@ -153,18 +157,18 @@ analysis_data <- read_parquet("/Users/lucky/Desktop/Explore-steak-related-produc
 
 #### Distribution of current_price by old_price ####
 ggplot(analysis_data, aes(x = old_price, y = current_price)) +
-  geom_point(alpha = 0.6, color = "orange", size = 2) + # Add transparency and size for clarity
-  geom_smooth(method = "lm", color = "purple", se = FALSE, linetype = "dashed") + # Add trendline
+  geom_point(alpha = 0.4, color = "orange", size = 3) + # Adjusted transparency and point size for better visibility
+  geom_smooth(method = "lm", color = "blue", se = FALSE, linetype = "solid") + # Changed trendline to solid for better contrast
   labs(
     title = "Relationship Between Old and Current Prices",
-    subtitle = "Steak-related products",
+    subtitle = "Steak-related Products",
     x = "Old Price (CAD)",
     y = "Current Price (CAD)"
   ) +
-  theme_light() + # Change to a cleaner theme
+  theme_minimal() + # Use a minimal theme for better focus on data
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
-    plot.subtitle = element_text(size = 12),
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5), # Center-align title
+    plot.subtitle = element_text(size = 12, hjust = 0.5), # Center-align subtitle
     axis.text = element_text(size = 10),
     axis.title = element_text(size = 12)
   )
