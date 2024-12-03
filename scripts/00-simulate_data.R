@@ -9,15 +9,13 @@ library(tidyverse)
 set.seed(26)
 
 #### Simulate data ####
-# Vendor names
-vendors <- c("Walmart","Loblaws")
+vendors <- c("Walmart", "Loblaws")
 
 # Generate simulated data
 simulated_data <- tibble(
-  vendor = sample(vendors, size = 1000, replace = TRUE),  
-  current_price = round(runif(1000, 0.5, 60), 3),  
-  old_price = round(runif(1000, 1, 60), 3),
+  vendor = sample(vendors, size = 1000, replace = TRUE),
+  current_price = round(runif(n = 1000, min = 0.5, max = 60), 3),
+  old_price = round(runif(n = 1000, min = 1, max = 60), 3),
   month = sample(1:12, size = 1000, replace = TRUE)
 )
-
 write_csv(simulated_data, "data/00-simulated_data/simulated_data.csv")
