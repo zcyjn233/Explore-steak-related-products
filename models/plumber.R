@@ -11,7 +11,7 @@ version_number <- "0.0.1"
 # Define the variables
 variables <- list(
   old_price = "The previous price of the product, numeric value.",
-  vendor = "The vendor identifier, categorical - Galleria or TandT",
+  vendor = "The vendor identifier, categorical - Walmart or Loblaws",
   month = "The month of the year, numeric (1 to 12)."
 )
 
@@ -19,7 +19,7 @@ variables <- list(
 #* @param vendor 
 #* @param month 
 #* @get /predict_price
-predict_price <- function(old_price = 1.75, vendor = "Galleria", month = 6) {
+predict_price <- function(old_price = 1.75, vendor = "Walmart", month = 6) {
   # Convert inputs to appropriate types
   old_price <- as.numeric(old_price)
   vendor <- as.character(vendor)
@@ -36,9 +36,9 @@ predict_price <- function(old_price = 1.75, vendor = "Galleria", month = 6) {
   posterior_samples <- as.matrix(model)  # Convert to matrix for easier manipulation
   
   # Define the generative process for prediction
-  beta_old_price <- posterior_samples[, "old_price"]
-  beta_vendor <- posterior_samples[, "vendorTandT"]
-  beta_month <- posterior_samples[, "month"]
+  beta_o <- posterior_samples[, "old_price"]
+  beta_v <- posterior_samples[, "vendorTandT"]
+  beta_m <- posterior_samples[, "month"]
   alpha <- posterior_samples[, "(Intercept)"]
   
   # Compute the predicted value for the observation
