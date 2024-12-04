@@ -34,7 +34,7 @@ library(ggplot2)
 
 This paper investigates pricing dynamics in the retail grocery sector, focusing on steak-related products sold by two major supermarket chains: Walmart and Loblaws. The analysis leverages a rich dataset encompassing current and historical prices, product descriptions, and the timing of price changes to uncover trends in pricing strategies and their impact on consumer behavior. Steak-related products, such as AAA Angus Beef Ribeye Steak, serve as the centerpiece of this investigation, offering insights into the pricing tactics employed by each retailer. For instance, significant price reductions, such as a drop from $20.00/kg to $15.00/kg, provide a lens through which market competition and consumer demand can be analyzed. By focusing on these high-value products, the study aims to reveal how pricing adjustments influence purchasing patterns and shape the competitive landscape in the grocery sector.
 
-The study of pricing dynamics in the retail grocery sector is crucial for understanding market behavior and consumer responses. As noted in the literature, "customer turnover responds to pricing,"@tonsor2009consumer. indicating that price adjustments can significantly impact consumer loyalty and purchasing decisions.Additionally, research has shown that "product variety conceptualized within brands does have an impact on aggregate subcategory sales,"@tonsor2009consumer. suggesting that both pricing and product assortment strategies are vital in influencing consumer behavior.These insights underscore the importance of strategic pricing and product management in the competitive retail grocery landscape.
+The study of pricing dynamics in the retail grocery sector is crucial for understanding market behavior and consumer responses. As noted in the literature, "customer turnover responds to pricing,"[@tonsor2009consumer]. indicating that price adjustments can significantly impact consumer loyalty and purchasing decisions.Additionally, research has shown that "product variety conceptualized within brands does have an impact on aggregate subcategory sales,"[@tonsor2009consumer]. suggesting that both pricing and product assortment strategies are vital in influencing consumer behavior.These insights underscore the importance of strategic pricing and product management in the competitive retail grocery landscape.
 
 ## Estimand paragraph
 
@@ -104,6 +104,7 @@ The analysis focuses on three main outcome variables:
 
 3.Vendor Comparisons: Walmart and Loblaws demonstrate distinct pricing approaches. Walmart’s strategy emphasizes consistent low prices, while Loblaws relies on targeted promotions and premium offerings. These differences influence consumer behavior and overall sales trends, providing a comparative framework for analyzing competitive dynamics.
 
+
 We run the model in R [@citeR] and The data I used is from @citedata.
 -**`arrow`** [@arrow]:Provides tools for high-performance data storage and processing using Apache Arrow's columnar format, enabling fast I/O and cross-language interoperability.
 -**`tidyverse`** [@tidyverse]:A collection of R packages designed for data science, offering consistent tools for data manipulation, visualization, and cleaning.
@@ -114,6 +115,8 @@ We run the model in R [@citeR] and The data I used is from @citedata.
 -**`janitor`** [@janitor]:Streamlines data cleaning with tools for cleaning column names, finding duplicates, and creating frequency tables.
 -**`lubridate`** [@lubridate]:Simplifies working with dates and times in R by providing intuitive functions for parsing, arithmetic, and extraction.
 -**`ggplot2`** [@ggplot2]:A powerful R package for creating elegant and customizable data visualizations using the Grammar of Graphics framework.
+
+
 
 ```{r}
 #| label: fig-bll1
@@ -166,6 +169,7 @@ ggplot(analysis_data, aes(x = month, y = current_price, fill = month)) +
   )
 
 ```
+# Graph
 
 The two box plots illustrate the distribution of the current prices for steak-related products based on vendors (Walmart and Loblaws) and across different months.
 
@@ -242,21 +246,20 @@ A Gaussian likelihood is specified for the response variable, which is appropria
 
 3.Interpretability: Coefficients and their posterior distributions offer clear insights into the effects of vendor strategies, seasonal trends, and historical prices.
 
-Background details and diagnostics are included in [Appendix -@sec-model-details].
-
 
 ## Model set-up
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
-
 \begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
+y_i | \mu_i, \sigma &\sim \text{Normal}(\mu_i, \sigma) \\
+\mu_i &= \alpha + \beta_{\text{vendor}[i]} + \gamma_{\text{product}[i]} + \delta \cdot \text{month}[i] + \epsilon \cdot (\text{old\_price}[i] - \text{current\_price}[i]) \\
+\alpha &\sim \text{Normal}(0, 2.5) \\
+\beta_{\text{vendor}} &\sim \text{Normal}(0, 2.5) \\
+\gamma_{\text{product}} &\sim \text{Normal}(0, 2.5) \\
+\delta &\sim \text{Normal}(0, 2.5) \\
+\epsilon &\sim \text{Normal}(0, 2.5) \\
+\sigma &\sim \text{Exponential}(1)
 \end{align}
+
 
 
 
@@ -315,7 +318,10 @@ modelsummary::modelsummary(
 ```
 
 
-# alternative model introduction
+# Alternative model 
+
+## introduction
+
 The linear regression model, referred to as the "second model," investigates the relationship between the current price of steak-related products and key predictors, including the month, old price, and vendor. This model assumes a linear relationship between the dependent variable (current price) and the independent variables. The month variable captures potential seasonal effects, reflecting how pricing adjusts during periods of varying consumer demand. The old price serves as a critical predictor, indicating how historical pricing influences current pricing decisions, with a proportional relationship expected between the two. Finally, the vendor variable differentiates pricing strategies between Walmart and Loblaws, allowing the model to highlight vendor-specific differences in pricing approaches. By incorporating these predictors, the model provides insights into the factors that drive pricing decisions, enabling a better understanding of how time, historical patterns, and competitive strategies influence current pricing dynamics. This model serves as a foundation for analyzing and optimizing pricing strategies in the retail sector.
 
 ## model comparison: Linear Regression vs. Bayesian Regression
@@ -326,20 +332,20 @@ The dataset was randomly split into a training set (80% of the data) and a test 
 
 ## Model Predictions
 
-### Linear Regression Model: 
+1.Linear Regression Model: 
 The linear regression model predicts current prices using a deterministic approach based on the least-squares estimation of the parameters. The predictions are point estimates, providing a single predicted value for each observation in the test set.
 
-### Bayesian Regression Model: 
+2.Bayesian Regression Model: 
 The Bayesian regression model generates predictions by sampling from the posterior predictive distribution. This approach provides a distribution of possible predicted values for each observation, allowing for uncertainty quantification in addition to point predictions (e.g., the mean or median of the posterior distribution).
 
 ## Comparison of Performance
 The performance of the models was compared using metrics such as Root Mean Square Error (RMSE) and Mean Absolute Error (MAE), calculated on the test set predictions:
 
-### Linear Regression Model:
+1.Linear Regression Model:
 RMSE: Higher than the Bayesian model.
 MAE: Demonstrates reasonable predictive accuracy but does not account for uncertainty in the predictions.
 
-### Bayesian Regression Model:
+2.Bayesian Regression Model:
 RMSE: Lower than the linear regression model, indicating better predictive accuracy.
 MAE: Similar to or better than the linear regression model, showing improved fit to the test set.
 Uncertainty Quantification: The Bayesian model provides credible intervals for each prediction, offering a richer understanding of the range of plausible current prices.
@@ -347,14 +353,18 @@ Uncertainty Quantification: The Bayesian model provides credible intervals for e
 ## Why the Bayesian Model is More Suitable
 The Bayesian regression model proves to be more suitable for this analysis due to several factors:
 
-### Predictive Accuracy: 
+1.Predictive Accuracy: 
 The Bayesian model demonstrates lower RMSE and MAE, indicating better generalization to unseen data.
-### Uncertainty Quantification: 
+
+2.Uncertainty Quantification: 
 Unlike the linear regression model, the Bayesian model accounts for the uncertainty in the predictions, providing a probabilistic framework for decision-making.
-### Robustness: 
+
+3.Robustness: 
 The Bayesian approach is better suited to handle outliers and variability in the data, as it integrates prior knowledge with observed evidence to produce robust parameter estimates.
-### Interpretability: 
+
+4.Interpretability: 
 The posterior distributions for parameters in the Bayesian model provide insights into the strength and uncertainty of the relationships between predictors and the current price.
+
 ## Conclusion
 The comparison highlights that while the linear regression model offers simplicity and straightforward interpretability, the Bayesian regression model outperforms it in predictive accuracy, robustness, and the ability to quantify uncertainty. These advantages make the Bayesian model a more suitable choice for analyzing and predicting pricing dynamics in the retail grocery sector. By leveraging its probabilistic nature, the Bayesian model provides actionable insights that are both reliable and informative for optimizing pricing strategies.
 
@@ -392,9 +402,7 @@ One limitation is the model’s inability to fully capture outlier behaviors, su
 Future research should focus on refining the model to account for regional and demographic differences, offering more granular insights into consumer behavior. For example, analyzing how pricing strategies vary across different geographic regions or consumer segments could uncover additional patterns that inform targeted marketing and pricing decisions. Additionally, exploring the long-term impacts of pricing strategies on customer loyalty and brand equity would provide valuable guidance for balancing short-term revenue boosts with sustainable growth. This could include investigating the effects of promotional campaigns on repeat purchases or the role of premium pricing in enhancing brand perception.
 
 Overall, this study underscores the critical role of pricing in shaping competitive dynamics in the retail grocery sector. By leveraging insights into vendor strategies, seasonal trends, and consumer behavior, retailers can optimize their pricing decisions to drive sales, build customer loyalty, and maintain a competitive edge. The findings also highlight the importance of adopting flexible, data-driven approaches to pricing, enabling retailers to adapt to changing market conditions and consumer preferences. As the retail landscape continues to evolve, these insights provide a valuable foundation for developing innovative and effective pricing strategies.
-## Weaknesses and next steps
 
-Weaknesses and next steps should also be included.
 
 \newpage
 
