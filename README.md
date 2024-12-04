@@ -8,7 +8,7 @@ This study examines the pricing strategies employed by Walmart and Loblaws for s
 
 The repo is structured as:
 
--   `data/raw_data` contains the raw data as obtained from https://jacobfilipp.com/hammer/.
+-   `data/raw_data` contains the raw data as obtained from https://jacobfilipp.com/hammer/. You should download it and put it into 01-raw_data in the data folder before running the R program
 -   `data/analysis_data` contains the cleaned dataset that was constructed.
 -   `model` contains fitted models. 
 -   `Other` contains relevant literature, details about LLM chat interactions, and sketches.
