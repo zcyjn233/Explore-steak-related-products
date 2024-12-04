@@ -16,10 +16,15 @@ bibliography: references.bib
 #| include: false
 #| warning: false
 #| message: false
-citation("plumber")
 library(tidyverse)
 library(palmerpenguins)
 library(arrow)
+library(plumber)
+library(rstanarm)
+library(testthat)
+library(janitor)
+library(lubridate)
+library(ggplot2)
 ```
 
 
@@ -52,18 +57,28 @@ Pricing remains one of the most critical tools in the fiercely competitive groce
 
 # Data {#sec-data}
 
+## Data Sources
+
+The data on steak-related products were collected through a combination of automated data extraction and manual verification. Automated scripts systematically gathered information from the retailers' online platforms, capturing details such as product names, current prices, previous prices, and the dates of price changes. Manual verification ensured the accuracy and completeness of the data, addressing any discrepancies or anomalies found during automated extraction.
+
+Sources included:
+
+1.Online price listings from Walmart and Loblaws’ websites.
+
+2.Historical price archives available from retailer-specific datasets.
+
+3.Seasonal promotional catalogs to capture discount periods.
+
+
 ## Overview
 
-We use the statistical programming language R [@citeR] Our data [@citedata]
-
-The dataset used in this study comprises information on steak-related products from two major retailers, Walmart and Loblaws. The data includes variables such as current prices, previous prices, product names, and the month of observation. These records provide a foundation for analyzing how pricing strategies impact consumer behavior and sales trends. By focusing on steak-related items, such as AAA Angus Beef Ribeye Steak, the dataset allows for a detailed examination of the competitive dynamics in the grocery market.
+We use the statistical programming language R [@citeR]. The dataset used in this study comprises information on steak-related products from two major retailers, Walmart and Loblaws. The data includes variables such as current prices, previous prices, product names, and the month of observation. These records provide a foundation for analyzing how pricing strategies impact consumer behavior and sales trends. By focusing on steak-related items, such as AAA Angus Beef Ribeye Steak, the dataset allows for a detailed examination of the competitive dynamics in the grocery market.
 
 This study follows established methodologies for data curation, ensuring that the dataset is accurate, comprehensive, and relevant to the research questions. Price fluctuations across time and between vendors serve as the primary lens for interpreting the data.
 
+
 ## Measurement
 	
-The data on steak-related products from Walmart and Loblaws were collected through a combination of automated data extraction and manual verification.Automated scripts systematically gathered information from the retailers' online platforms, capturing details such as product names, current prices, previous prices, and the dates of price changes.
-
 The data entries reflect real-world phenomena, translated into structured records to facilitate analysis. Each entry captures the following:
 
 1.Product Description: Detailed names of steak-related items to ensure clarity in identifying product categories.
@@ -76,15 +91,27 @@ The data entries reflect real-world phenomena, translated into structured record
 
 Data collection involved extracting information from digital and physical price listings, ensuring consistency and accuracy. Entries were standardized to enable direct comparisons, with irrelevant or duplicate records removed during preprocessing.
 
+
 ## Outcome variables
 
 The analysis focuses on three main outcome variables:
 
 1.Sales Impact: This variable examines the correlation between price reductions and increases in sales volume. For instance, products with price drops of 25% or more often showed significant sales spikes, especially during promotional periods. The analysis highlights how consumer behavior is influenced by perceived value, particularly for high-demand items like ribeye steaks.
 
-2.Seasonal Trends: Seasonal variation is evident in the data, with higher sales volumes during summer mont
+2.Seasonal Trends: Seasonal variation is evident in the data, with higher sales volumes observed during summer months, coinciding with peak grilling periods. This trend underscores the importance of aligning pricing strategies with seasonal consumer behavior.
 
-3.Vendor Comparisons: Walmart and Loblaws
+3.Vendor Comparisons: Walmart and Loblaws demonstrate distinct pricing approaches. Walmart’s strategy emphasizes consistent low prices, while Loblaws relies on targeted promotions and premium offerings. These differences influence consumer behavior and overall sales trends, providing a comparative framework for analyzing competitive dynamics.
+
+We run the model in R [@citeR] and The data I used is from @citedata.
+-**`arrow`** [@arrow]:Provides tools for high-performance data storage and processing using Apache Arrow's columnar format, enabling fast I/O and cross-language interoperability.
+-**`tidyverse`** [@tidyverse]:A collection of R packages designed for data science, offering consistent tools for data manipulation, visualization, and cleaning.
+-**`palmerpenguins`** [@palmerpenguins]:Supplies an easy-to-use dataset about penguins for educational purposes, ideal for data visualization and statistical practice.
+-**`plumber`** [@plumber]:Converts R functions into RESTful API endpoints, enabling the creation of web services and interactive applications.
+-**`rstanarm`** [@rstanarm]:Facilitates Bayesian regression modeling with Stan using familiar R syntax for linear, generalized, and multilevel models.
+-**`testthat`** [@testthat]:Simplifies unit testing in R, allowing developers to test code behavior and ensure robustness.
+-**`janitor`** [@janitor]:Streamlines data cleaning with tools for cleaning column names, finding duplicates, and creating frequency tables.
+-**`lubridate`** [@lubridate]:Simplifies working with dates and times in R by providing intuitive functions for parsing, arithmetic, and extraction.
+-**`ggplot2`** [@ggplot2]:A powerful R package for creating elegant and customizable data visualizations using the Grammar of Graphics framework.
 
 ```{r}
 #| label: fig-bll1
@@ -228,9 +255,6 @@ y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
 \gamma &\sim \mbox{Normal}(0, 2.5) \\
 \sigma &\sim \mbox{Exponential}(1)
 \end{align}
-
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
-date is from @citedata.
 
 
 
