@@ -10,6 +10,7 @@ library(tidyverse)
 library(arrow)
 
 #### Read data ####
+analysis_data <- read_parquet("data/02-analysis_data/analysis_data.parquet")
 # Ensure month is treated as a factor
 analysis_data <- analysis_data %>%
   mutate(month = factor(month, levels = 1:12, labels = month.abb[1:12]))
